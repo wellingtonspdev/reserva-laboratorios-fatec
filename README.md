@@ -27,6 +27,7 @@ Este repositório público é um snapshot sanitizado do fork usado para a FATEC.
 - [Deploy](#deploy)
 - [Segurança e Dados Sensíveis](#segurança-e-dados-sensíveis)
 - [Mudanças em Relação ao Original](#mudanças-em-relação-ao-original)
+- [Desenvolvedores](#desenvolvedores)
 - [Licença](#licença)
 
 ## Sobre o Projeto
@@ -383,6 +384,15 @@ Detalhes completos: [docs/MUDANCAS_DO_ORIGINAL.md](docs/MUDANCAS_DO_ORIGINAL.md)
 
 - [docs/SUPORTE_DEPLOY.md](docs/SUPORTE_DEPLOY.md): guia para equipe responsável por produção.
 - [docs/MUDANCAS_DO_ORIGINAL.md](docs/MUDANCAS_DO_ORIGINAL.md): mudanças do fork em relação ao ClassroomBookings original.
+
+## Desenvolvedores
+
+Este fork foi adaptado e preparado para entrega pública por:
+
+| Desenvolvedor | Perfil |
+| --- | --- |
+| Wellington Siqueira Porto | [@wellingtonspdev](https://github.com/wellingtonspdev) |
+| Felipe Rocha | [@FelipeRCod](https://github.com/FelipeRCod) |
 
 ## Origem do Projeto
 
