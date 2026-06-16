@@ -1,0 +1,31 @@
+<?php
+
+$lang['cal.today'] = 'Hoje';
+$lang['cal.days'] = 'Dias';
+$lang['cal.day'] = 'Dia';
+$lang['cal.weekday.Monday'] = 'Segunda-feira';
+$lang['cal.weekday.Tuesday'] = 'Terca-feira';
+$lang['cal.weekday.Wednesday'] = 'Quarta-feira';
+$lang['cal.weekday.Thursday'] = 'Quinta-feira';
+$lang['cal.weekday.Friday'] = 'Sexta-feira';
+$lang['cal.weekday.Saturday'] = 'Sabado';
+$lang['cal.weekday.Sunday'] = 'Domingo';
+$lang['cal.weekday.Mon'] = 'Seg';
+$lang['cal.weekday.Tue'] = 'Ter';
+$lang['cal.weekday.Wed'] = 'Qua';
+$lang['cal.weekday.Thu'] = 'Qui';
+$lang['cal.weekday.Fri'] = 'Sex';
+$lang['cal.weekday.Sat'] = 'Sab';
+$lang['cal.weekday.Sun'] = 'Dom';
+$lang['cal.month.January'] = 'Janeiro';
+$lang['cal.month.February'] = 'Fevereiro';
+$lang['cal.month.March'] = 'Marco';
+$lang['cal.month.April'] = 'Abril';
+$lang['cal.month.May'] = 'Maio';
+$lang['cal.month.June'] = 'Junho';
+$lang['cal.month.July'] = 'Julho';
+$lang['cal.month.August'] = 'Agosto';
+$lang['cal.month.September'] = 'Setembro';
+$lang['cal.month.October'] = 'Outubro';
+$lang['cal.month.November'] = 'Novembro';
+$lang['cal.month.December'] = 'Dezembro';

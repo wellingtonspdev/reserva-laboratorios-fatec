@@ -1,0 +1,2458 @@
+{
+  "ambientes": [
+    {
+      "nome": "Auditório (Interno)",
+      "localizacao": "FATEC",
+      "capacidadeAlunos": 30,
+      "computadores": 30,
+      "tipoAmbiente": "laboratorio",
+      "recursos": {
+        "espelhamentoPor": "Projetor",
+        "lousa": "Lousa branca",
+        "internet": "Cabeada e Wi-Fi",
+        "climatizacao": "Ar-condicionado",
+        "mobiliario": [
+          "Mesas",
+          "Cadeiras"
+        ]
+      },
+      "equipamentos": [
+        {
+          "nome": "Projetor",
+          "quantidade": 1
+        },
+        {
+          "nome": "Computador do professor",
+          "quantidade": 1
+        }
+      ],
+      "softwares": [
+        {
+          "nome": "Pacote padrao de laboratorio"
+        }
+      ],
+      "restricoesUso": [
+        "Detalhes mockados para ambiente de desenvolvimento"
+      ],
+      "manutencao": {
+        "status": "operacional",
+        "prioridadePreventiva": "normal",
+        "proximaRevisaoSimulada": "2026-12-31",
+        "observacao": "Informacao gerada a partir do seed local"
+      },
+      "observacoes": [
+        "Dados complementares mockados para popular o ambiente local"
+      ],
+      "fonteDetalhes": "mock_local",
+      "nivelConfiancaDetalhes": "simulado"
+    },
+    {
+      "nome": "CAD 1",
+      "localizacao": "FATEC",
+      "capacidadeAlunos": 30,
+      "computadores": 30,
+      "tipoAmbiente": "laboratorio",
+      "recursos": {
+        "espelhamentoPor": "Projetor",
+        "lousa": "Lousa branca",
+        "internet": "Cabeada e Wi-Fi",
+        "climatizacao": "Ar-condicionado",
+        "mobiliario": [
+          "Mesas",
+          "Cadeiras"
+        ]
+      },
+      "equipamentos": [
+        {
+          "nome": "Projetor",
+          "quantidade": 1
+        },
+        {
+          "nome": "Computador do professor",
+          "quantidade": 1
+        }
+      ],
+      "softwares": [
+        {
+          "nome": "Pacote padrao de laboratorio"
+        }
+      ],
+      "restricoesUso": [
+        "Detalhes mockados para ambiente de desenvolvimento"
+      ],
+      "manutencao": {
+        "status": "operacional",
+        "prioridadePreventiva": "normal",
+        "proximaRevisaoSimulada": "2026-12-31",
+        "observacao": "Informacao gerada a partir do seed local"
+      },
+      "observacoes": [
+        "Dados complementares mockados para popular o ambiente local"
+      ],
+      "fonteDetalhes": "mock_local",
+      "nivelConfiancaDetalhes": "simulado"
+    },
+    {
+      "nome": "CAD 2",
+      "localizacao": "FATEC",
+      "capacidadeAlunos": 30,
+      "computadores": 30,
+      "tipoAmbiente": "laboratorio",
+      "recursos": {
+        "espelhamentoPor": "Projetor",
+        "lousa": "Lousa branca",
+        "internet": "Cabeada e Wi-Fi",
+        "climatizacao": "Ar-condicionado",
+        "mobiliario": [
+          "Mesas",
+          "Cadeiras"
+        ]
+      },
+      "equipamentos": [
+        {
+          "nome": "Projetor",
+          "quantidade": 1
+        },
+        {
+          "nome": "Computador do professor",
+          "quantidade": 1
+        }
+      ],
+      "softwares": [
+        {
+          "nome": "Pacote padrao de laboratorio"
+        }
+      ],
+      "restricoesUso": [
+        "Detalhes mockados para ambiente de desenvolvimento"
+      ],
+      "manutencao": {
+        "status": "operacional",
+        "prioridadePreventiva": "normal",
+        "proximaRevisaoSimulada": "2026-12-31",
+        "observacao": "Informacao gerada a partir do seed local"
+      },
+      "observacoes": [
+        "Dados complementares mockados para popular o ambiente local"
+      ],
+      "fonteDetalhes": "mock_local",
+      "nivelConfiancaDetalhes": "simulado"
+    },
+    {
+      "nome": "Climatização",
+      "localizacao": "FATEC",
+      "capacidadeAlunos": 30,
+      "computadores": 30,
+      "tipoAmbiente": "laboratorio",
+      "recursos": {
+        "espelhamentoPor": "Projetor",
+        "lousa": "Lousa branca",
+        "internet": "Cabeada e Wi-Fi",
+        "climatizacao": "Ar-condicionado",
+        "mobiliario": [
+          "Mesas",
+          "Cadeiras"
+        ]
+      },
+      "equipamentos": [
+        {
+          "nome": "Projetor",
+          "quantidade": 1
+        },
+        {
+          "nome": "Computador do professor",
+          "quantidade": 1
+        }
+      ],
+      "softwares": [
+        {
+          "nome": "Pacote padrao de laboratorio"
+        }
+      ],
+      "restricoesUso": [
+        "Detalhes mockados para ambiente de desenvolvimento"
+      ],
+      "manutencao": {
+        "status": "operacional",
+        "prioridadePreventiva": "normal",
+        "proximaRevisaoSimulada": "2026-12-31",
+        "observacao": "Informacao gerada a partir do seed local"
+      },
+      "observacoes": [
+        "Dados complementares mockados para popular o ambiente local"
+      ],
+      "fonteDetalhes": "mock_local",
+      "nivelConfiancaDetalhes": "simulado"
+    },
+    {
+      "nome": "Eletricidade",
+      "localizacao": "FATEC",
+      "capacidadeAlunos": 30,
+      "computadores": 30,
+      "tipoAmbiente": "laboratorio",
+      "recursos": {
+        "espelhamentoPor": "Projetor",
+        "lousa": "Lousa branca",
+        "internet": "Cabeada e Wi-Fi",
+        "climatizacao": "Ar-condicionado",
+        "mobiliario": [
+          "Mesas",
+          "Cadeiras"
+        ]
+      },
+      "equipamentos": [
+        {
+          "nome": "Projetor",
+          "quantidade": 1
+        },
+        {
+          "nome": "Computador do professor",
+          "quantidade": 1
+        }
+      ],
+      "softwares": [
+        {
+          "nome": "Pacote padrao de laboratorio"
+        }
+      ],
+      "restricoesUso": [
+        "Detalhes mockados para ambiente de desenvolvimento"
+      ],
+      "manutencao": {
+        "status": "operacional",
+        "prioridadePreventiva": "normal",
+        "proximaRevisaoSimulada": "2026-12-31",
+        "observacao": "Informacao gerada a partir do seed local"
+      },
+      "observacoes": [
+        "Dados complementares mockados para popular o ambiente local"
+      ],
+      "fonteDetalhes": "mock_local",
+      "nivelConfiancaDetalhes": "simulado"
+    },
+    {
+      "nome": "Ensaios Mecânicos",
+      "localizacao": "FATEC",
+      "capacidadeAlunos": 30,
+      "computadores": 30,
+      "tipoAmbiente": "laboratorio",
+      "recursos": {
+        "espelhamentoPor": "Projetor",
+        "lousa": "Lousa branca",
+        "internet": "Cabeada e Wi-Fi",
+        "climatizacao": "Ar-condicionado",
+        "mobiliario": [
+          "Mesas",
+          "Cadeiras"
+        ]
+      },
+      "equipamentos": [
+        {
+          "nome": "Projetor",
+          "quantidade": 1
+        },
+        {
+          "nome": "Computador do professor",
+          "quantidade": 1
+        }
+      ],
+      "softwares": [
+        {
+          "nome": "Pacote padrao de laboratorio"
+        }
+      ],
+      "restricoesUso": [
+        "Detalhes mockados para ambiente de desenvolvimento"
+      ],
+      "manutencao": {
+        "status": "operacional",
+        "prioridadePreventiva": "normal",
+        "proximaRevisaoSimulada": "2026-12-31",
+        "observacao": "Informacao gerada a partir do seed local"
+      },
+      "observacoes": [
+        "Dados complementares mockados para popular o ambiente local"
+      ],
+      "fonteDetalhes": "mock_local",
+      "nivelConfiancaDetalhes": "simulado"
+    },
+    {
+      "nome": "Fís / Metr / Fentran",
+      "localizacao": "FATEC",
+      "capacidadeAlunos": 30,
+      "computadores": 30,
+      "tipoAmbiente": "laboratorio",
+      "recursos": {
+        "espelhamentoPor": "Projetor",
+        "lousa": "Lousa branca",
+        "internet": "Cabeada e Wi-Fi",
+        "climatizacao": "Ar-condicionado",
+        "mobiliario": [
+          "Mesas",
+          "Cadeiras"
+        ]
+      },
+      "equipamentos": [
+        {
+          "nome": "Projetor",
+          "quantidade": 1
+        },
+        {
+          "nome": "Computador do professor",
+          "quantidade": 1
+        }
+      ],
+      "softwares": [
+        {
+          "nome": "Pacote padrao de laboratorio"
+        }
+      ],
+      "restricoesUso": [
+        "Detalhes mockados para ambiente de desenvolvimento"
+      ],
+      "manutencao": {
+        "status": "operacional",
+        "prioridadePreventiva": "normal",
+        "proximaRevisaoSimulada": "2026-12-31",
+        "observacao": "Informacao gerada a partir do seed local"
+      },
+      "observacoes": [
+        "Dados complementares mockados para popular o ambiente local"
+      ],
+      "fonteDetalhes": "mock_local",
+      "nivelConfiancaDetalhes": "simulado"
+    },
+    {
+      "nome": "Hidr./Pneumática",
+      "localizacao": "FATEC",
+      "capacidadeAlunos": 30,
+      "computadores": 30,
+      "tipoAmbiente": "laboratorio",
+      "recursos": {
+        "espelhamentoPor": "Projetor",
+        "lousa": "Lousa branca",
+        "internet": "Cabeada e Wi-Fi",
+        "climatizacao": "Ar-condicionado",
+        "mobiliario": [
+          "Mesas",
+          "Cadeiras"
+        ]
+      },
+      "equipamentos": [
+        {
+          "nome": "Projetor",
+          "quantidade": 1
+        },
+        {
+          "nome": "Computador do professor",
+          "quantidade": 1
+        }
+      ],
+      "softwares": [
+        {
+          "nome": "Pacote padrao de laboratorio"
+        }
+      ],
+      "restricoesUso": [
+        "Detalhes mockados para ambiente de desenvolvimento"
+      ],
+      "manutencao": {
+        "status": "operacional",
+        "prioridadePreventiva": "normal",
+        "proximaRevisaoSimulada": "2026-12-31",
+        "observacao": "Informacao gerada a partir do seed local"
+      },
+      "observacoes": [
+        "Dados complementares mockados para popular o ambiente local"
+      ],
+      "fonteDetalhes": "mock_local",
+      "nivelConfiancaDetalhes": "simulado"
+    },
+    {
+      "nome": "Informática 35",
+      "localizacao": "FATEC",
+      "capacidadeAlunos": 30,
+      "computadores": 30,
+      "tipoAmbiente": "laboratorio",
+      "recursos": {
+        "espelhamentoPor": "Projetor",
+        "lousa": "Lousa branca",
+        "internet": "Cabeada e Wi-Fi",
+        "climatizacao": "Ar-condicionado",
+        "mobiliario": [
+          "Mesas",
+          "Cadeiras"
+        ]
+      },
+      "equipamentos": [
+        {
+          "nome": "Projetor",
+          "quantidade": 1
+        },
+        {
+          "nome": "Computador do professor",
+          "quantidade": 1
+        }
+      ],
+      "softwares": [
+        {
+          "nome": "Pacote padrao de laboratorio"
+        }
+      ],
+      "restricoesUso": [
+        "Detalhes mockados para ambiente de desenvolvimento"
+      ],
+      "manutencao": {
+        "status": "operacional",
+        "prioridadePreventiva": "normal",
+        "proximaRevisaoSimulada": "2026-12-31",
+        "observacao": "Informacao gerada a partir do seed local"
+      },
+      "observacoes": [
+        "Dados complementares mockados para popular o ambiente local"
+      ],
+      "fonteDetalhes": "mock_local",
+      "nivelConfiancaDetalhes": "simulado"
+    },
+    {
+      "nome": "Informática 36",
+      "localizacao": "FATEC",
+      "capacidadeAlunos": 30,
+      "computadores": 30,
+      "tipoAmbiente": "laboratorio",
+      "recursos": {
+        "espelhamentoPor": "Projetor",
+        "lousa": "Lousa branca",
+        "internet": "Cabeada e Wi-Fi",
+        "climatizacao": "Ar-condicionado",
+        "mobiliario": [
+          "Mesas",
+          "Cadeiras"
+        ]
+      },
+      "equipamentos": [
+        {
+          "nome": "Projetor",
+          "quantidade": 1
+        },
+        {
+          "nome": "Computador do professor",
+          "quantidade": 1
+        }
+      ],
+      "softwares": [
+        {
+          "nome": "Pacote padrao de laboratorio"
+        }
+      ],
+      "restricoesUso": [
+        "Detalhes mockados para ambiente de desenvolvimento"
+      ],
+      "manutencao": {
+        "status": "operacional",
+        "prioridadePreventiva": "normal",
+        "proximaRevisaoSimulada": "2026-12-31",
+        "observacao": "Informacao gerada a partir do seed local"
+      },
+      "observacoes": [
+        "Dados complementares mockados para popular o ambiente local"
+      ],
+      "fonteDetalhes": "mock_local",
+      "nivelConfiancaDetalhes": "simulado"
+    },
+    {
+      "nome": "Informática 37",
+      "localizacao": "FATEC",
+      "capacidadeAlunos": 30,
+      "computadores": 30,
+      "tipoAmbiente": "laboratorio",
+      "recursos": {
+        "espelhamentoPor": "Projetor",
+        "lousa": "Lousa branca",
+        "internet": "Cabeada e Wi-Fi",
+        "climatizacao": "Ar-condicionado",
+        "mobiliario": [
+          "Mesas",
+          "Cadeiras"
+        ]
+      },
+      "equipamentos": [
+        {
+          "nome": "Projetor",
+          "quantidade": 1
+        },
+        {
+          "nome": "Computador do professor",
+          "quantidade": 1
+        }
+      ],
+      "softwares": [
+        {
+          "nome": "Pacote padrao de laboratorio"
+        }
+      ],
+      "restricoesUso": [
+        "Detalhes mockados para ambiente de desenvolvimento"
+      ],
+      "manutencao": {
+        "status": "operacional",
+        "prioridadePreventiva": "normal",
+        "proximaRevisaoSimulada": "2026-12-31",
+        "observacao": "Informacao gerada a partir do seed local"
+      },
+      "observacoes": [
+        "Dados complementares mockados para popular o ambiente local"
+      ],
+      "fonteDetalhes": "mock_local",
+      "nivelConfiancaDetalhes": "simulado"
+    },
+    {
+      "nome": "Lab 29 (DSM1)",
+      "localizacao": "FATEC",
+      "capacidadeAlunos": 30,
+      "computadores": 30,
+      "tipoAmbiente": "laboratorio",
+      "recursos": {
+        "espelhamentoPor": "Projetor",
+        "lousa": "Lousa branca",
+        "internet": "Cabeada e Wi-Fi",
+        "climatizacao": "Ar-condicionado",
+        "mobiliario": [
+          "Mesas",
+          "Cadeiras"
+        ]
+      },
+      "equipamentos": [
+        {
+          "nome": "Projetor",
+          "quantidade": 1
+        },
+        {
+          "nome": "Computador do professor",
+          "quantidade": 1
+        }
+      ],
+      "softwares": [
+        {
+          "nome": "Pacote padrao de laboratorio"
+        }
+      ],
+      "restricoesUso": [
+        "Detalhes mockados para ambiente de desenvolvimento"
+      ],
+      "manutencao": {
+        "status": "operacional",
+        "prioridadePreventiva": "normal",
+        "proximaRevisaoSimulada": "2026-12-31",
+        "observacao": "Informacao gerada a partir do seed local"
+      },
+      "observacoes": [
+        "Dados complementares mockados para popular o ambiente local"
+      ],
+      "fonteDetalhes": "mock_local",
+      "nivelConfiancaDetalhes": "simulado"
+    },
+    {
+      "nome": "Lab 30 (DSM2)",
+      "localizacao": "FATEC",
+      "capacidadeAlunos": 30,
+      "computadores": 30,
+      "tipoAmbiente": "laboratorio",
+      "recursos": {
+        "espelhamentoPor": "Projetor",
+        "lousa": "Lousa branca",
+        "internet": "Cabeada e Wi-Fi",
+        "climatizacao": "Ar-condicionado",
+        "mobiliario": [
+          "Mesas",
+          "Cadeiras"
+        ]
+      },
+      "equipamentos": [
+        {
+          "nome": "Projetor",
+          "quantidade": 1
+        },
+        {
+          "nome": "Computador do professor",
+          "quantidade": 1
+        }
+      ],
+      "softwares": [
+        {
+          "nome": "Pacote padrao de laboratorio"
+        }
+      ],
+      "restricoesUso": [
+        "Detalhes mockados para ambiente de desenvolvimento"
+      ],
+      "manutencao": {
+        "status": "operacional",
+        "prioridadePreventiva": "normal",
+        "proximaRevisaoSimulada": "2026-12-31",
+        "observacao": "Informacao gerada a partir do seed local"
+      },
+      "observacoes": [
+        "Dados complementares mockados para popular o ambiente local"
+      ],
+      "fonteDetalhes": "mock_local",
+      "nivelConfiancaDetalhes": "simulado"
+    },
+    {
+      "nome": "Lab 36-B (NOTE)",
+      "localizacao": "FATEC",
+      "capacidadeAlunos": 30,
+      "computadores": 30,
+      "tipoAmbiente": "laboratorio",
+      "recursos": {
+        "espelhamentoPor": "Projetor",
+        "lousa": "Lousa branca",
+        "internet": "Cabeada e Wi-Fi",
+        "climatizacao": "Ar-condicionado",
+        "mobiliario": [
+          "Mesas",
+          "Cadeiras"
+        ]
+      },
+      "equipamentos": [
+        {
+          "nome": "Projetor",
+          "quantidade": 1
+        },
+        {
+          "nome": "Computador do professor",
+          "quantidade": 1
+        }
+      ],
+      "softwares": [
+        {
+          "nome": "Pacote padrao de laboratorio"
+        }
+      ],
+      "restricoesUso": [
+        "Detalhes mockados para ambiente de desenvolvimento"
+      ],
+      "manutencao": {
+        "status": "operacional",
+        "prioridadePreventiva": "normal",
+        "proximaRevisaoSimulada": "2026-12-31",
+        "observacao": "Informacao gerada a partir do seed local"
+      },
+      "observacoes": [
+        "Dados complementares mockados para popular o ambiente local"
+      ],
+      "fonteDetalhes": "mock_local",
+      "nivelConfiancaDetalhes": "simulado"
+    },
+    {
+      "nome": "Lab 38 (NOTE)",
+      "localizacao": "FATEC",
+      "capacidadeAlunos": 30,
+      "computadores": 30,
+      "tipoAmbiente": "laboratorio",
+      "recursos": {
+        "espelhamentoPor": "Projetor",
+        "lousa": "Lousa branca",
+        "internet": "Cabeada e Wi-Fi",
+        "climatizacao": "Ar-condicionado",
+        "mobiliario": [
+          "Mesas",
+          "Cadeiras"
+        ]
+      },
+      "equipamentos": [
+        {
+          "nome": "Projetor",
+          "quantidade": 1
+        },
+        {
+          "nome": "Computador do professor",
+          "quantidade": 1
+        }
+      ],
+      "softwares": [
+        {
+          "nome": "Pacote padrao de laboratorio"
+        }
+      ],
+      "restricoesUso": [
+        "Detalhes mockados para ambiente de desenvolvimento"
+      ],
+      "manutencao": {
+        "status": "operacional",
+        "prioridadePreventiva": "normal",
+        "proximaRevisaoSimulada": "2026-12-31",
+        "observacao": "Informacao gerada a partir do seed local"
+      },
+      "observacoes": [
+        "Dados complementares mockados para popular o ambiente local"
+      ],
+      "fonteDetalhes": "mock_local",
+      "nivelConfiancaDetalhes": "simulado"
+    },
+    {
+      "nome": "LATECA",
+      "localizacao": "FATEC",
+      "capacidadeAlunos": 30,
+      "computadores": 30,
+      "tipoAmbiente": "laboratorio",
+      "recursos": {
+        "espelhamentoPor": "Projetor",
+        "lousa": "Lousa branca",
+        "internet": "Cabeada e Wi-Fi",
+        "climatizacao": "Ar-condicionado",
+        "mobiliario": [
+          "Mesas",
+          "Cadeiras"
+        ]
+      },
+      "equipamentos": [
+        {
+          "nome": "Projetor",
+          "quantidade": 1
+        },
+        {
+          "nome": "Computador do professor",
+          "quantidade": 1
+        }
+      ],
+      "softwares": [
+        {
+          "nome": "Pacote padrao de laboratorio"
+        }
+      ],
+      "restricoesUso": [
+        "Detalhes mockados para ambiente de desenvolvimento"
+      ],
+      "manutencao": {
+        "status": "operacional",
+        "prioridadePreventiva": "normal",
+        "proximaRevisaoSimulada": "2026-12-31",
+        "observacao": "Informacao gerada a partir do seed local"
+      },
+      "observacoes": [
+        "Dados complementares mockados para popular o ambiente local"
+      ],
+      "fonteDetalhes": "mock_local",
+      "nivelConfiancaDetalhes": "simulado"
+    },
+    {
+      "nome": "Máquina Elétricas",
+      "localizacao": "FATEC",
+      "capacidadeAlunos": 30,
+      "computadores": 30,
+      "tipoAmbiente": "laboratorio",
+      "recursos": {
+        "espelhamentoPor": "Projetor",
+        "lousa": "Lousa branca",
+        "internet": "Cabeada e Wi-Fi",
+        "climatizacao": "Ar-condicionado",
+        "mobiliario": [
+          "Mesas",
+          "Cadeiras"
+        ]
+      },
+      "equipamentos": [
+        {
+          "nome": "Projetor",
+          "quantidade": 1
+        },
+        {
+          "nome": "Computador do professor",
+          "quantidade": 1
+        }
+      ],
+      "softwares": [
+        {
+          "nome": "Pacote padrao de laboratorio"
+        }
+      ],
+      "restricoesUso": [
+        "Detalhes mockados para ambiente de desenvolvimento"
+      ],
+      "manutencao": {
+        "status": "operacional",
+        "prioridadePreventiva": "normal",
+        "proximaRevisaoSimulada": "2026-12-31",
+        "observacao": "Informacao gerada a partir do seed local"
+      },
+      "observacoes": [
+        "Dados complementares mockados para popular o ambiente local"
+      ],
+      "fonteDetalhes": "mock_local",
+      "nivelConfiancaDetalhes": "simulado"
+    },
+    {
+      "nome": "Microscopia",
+      "localizacao": "FATEC",
+      "capacidadeAlunos": 30,
+      "computadores": 30,
+      "tipoAmbiente": "laboratorio",
+      "recursos": {
+        "espelhamentoPor": "Projetor",
+        "lousa": "Lousa branca",
+        "internet": "Cabeada e Wi-Fi",
+        "climatizacao": "Ar-condicionado",
+        "mobiliario": [
+          "Mesas",
+          "Cadeiras"
+        ]
+      },
+      "equipamentos": [
+        {
+          "nome": "Projetor",
+          "quantidade": 1
+        },
+        {
+          "nome": "Computador do professor",
+          "quantidade": 1
+        }
+      ],
+      "softwares": [
+        {
+          "nome": "Pacote padrao de laboratorio"
+        }
+      ],
+      "restricoesUso": [
+        "Detalhes mockados para ambiente de desenvolvimento"
+      ],
+      "manutencao": {
+        "status": "operacional",
+        "prioridadePreventiva": "normal",
+        "proximaRevisaoSimulada": "2026-12-31",
+        "observacao": "Informacao gerada a partir do seed local"
+      },
+      "observacoes": [
+        "Dados complementares mockados para popular o ambiente local"
+      ],
+      "fonteDetalhes": "mock_local",
+      "nivelConfiancaDetalhes": "simulado"
+    },
+    {
+      "nome": "MiniCIM",
+      "localizacao": "FATEC",
+      "capacidadeAlunos": 30,
+      "computadores": 30,
+      "tipoAmbiente": "laboratorio",
+      "recursos": {
+        "espelhamentoPor": "Projetor",
+        "lousa": "Lousa branca",
+        "internet": "Cabeada e Wi-Fi",
+        "climatizacao": "Ar-condicionado",
+        "mobiliario": [
+          "Mesas",
+          "Cadeiras"
+        ]
+      },
+      "equipamentos": [
+        {
+          "nome": "Projetor",
+          "quantidade": 1
+        },
+        {
+          "nome": "Computador do professor",
+          "quantidade": 1
+        }
+      ],
+      "softwares": [
+        {
+          "nome": "Pacote padrao de laboratorio"
+        }
+      ],
+      "restricoesUso": [
+        "Detalhes mockados para ambiente de desenvolvimento"
+      ],
+      "manutencao": {
+        "status": "operacional",
+        "prioridadePreventiva": "normal",
+        "proximaRevisaoSimulada": "2026-12-31",
+        "observacao": "Informacao gerada a partir do seed local"
+      },
+      "observacoes": [
+        "Dados complementares mockados para popular o ambiente local"
+      ],
+      "fonteDetalhes": "mock_local",
+      "nivelConfiancaDetalhes": "simulado"
+    },
+    {
+      "nome": "Química",
+      "localizacao": "FATEC",
+      "capacidadeAlunos": 30,
+      "computadores": 30,
+      "tipoAmbiente": "laboratorio",
+      "recursos": {
+        "espelhamentoPor": "Projetor",
+        "lousa": "Lousa branca",
+        "internet": "Cabeada e Wi-Fi",
+        "climatizacao": "Ar-condicionado",
+        "mobiliario": [
+          "Mesas",
+          "Cadeiras"
+        ]
+      },
+      "equipamentos": [
+        {
+          "nome": "Projetor",
+          "quantidade": 1
+        },
+        {
+          "nome": "Computador do professor",
+          "quantidade": 1
+        }
+      ],
+      "softwares": [
+        {
+          "nome": "Pacote padrao de laboratorio"
+        }
+      ],
+      "restricoesUso": [
+        "Detalhes mockados para ambiente de desenvolvimento"
+      ],
+      "manutencao": {
+        "status": "operacional",
+        "prioridadePreventiva": "normal",
+        "proximaRevisaoSimulada": "2026-12-31",
+        "observacao": "Informacao gerada a partir do seed local"
+      },
+      "observacoes": [
+        "Dados complementares mockados para popular o ambiente local"
+      ],
+      "fonteDetalhes": "mock_local",
+      "nivelConfiancaDetalhes": "simulado"
+    },
+    {
+      "nome": "Refrigeração",
+      "localizacao": "FATEC",
+      "capacidadeAlunos": 30,
+      "computadores": 30,
+      "tipoAmbiente": "laboratorio",
+      "recursos": {
+        "espelhamentoPor": "Projetor",
+        "lousa": "Lousa branca",
+        "internet": "Cabeada e Wi-Fi",
+        "climatizacao": "Ar-condicionado",
+        "mobiliario": [
+          "Mesas",
+          "Cadeiras"
+        ]
+      },
+      "equipamentos": [
+        {
+          "nome": "Projetor",
+          "quantidade": 1
+        },
+        {
+          "nome": "Computador do professor",
+          "quantidade": 1
+        }
+      ],
+      "softwares": [
+        {
+          "nome": "Pacote padrao de laboratorio"
+        }
+      ],
+      "restricoesUso": [
+        "Detalhes mockados para ambiente de desenvolvimento"
+      ],
+      "manutencao": {
+        "status": "operacional",
+        "prioridadePreventiva": "normal",
+        "proximaRevisaoSimulada": "2026-12-31",
+        "observacao": "Informacao gerada a partir do seed local"
+      },
+      "observacoes": [
+        "Dados complementares mockados para popular o ambiente local"
+      ],
+      "fonteDetalhes": "mock_local",
+      "nivelConfiancaDetalhes": "simulado"
+    },
+    {
+      "nome": "Sala 10",
+      "localizacao": "FATEC",
+      "capacidadeAlunos": 30,
+      "computadores": 30,
+      "tipoAmbiente": "laboratorio",
+      "recursos": {
+        "espelhamentoPor": "Projetor",
+        "lousa": "Lousa branca",
+        "internet": "Cabeada e Wi-Fi",
+        "climatizacao": "Ar-condicionado",
+        "mobiliario": [
+          "Mesas",
+          "Cadeiras"
+        ]
+      },
+      "equipamentos": [
+        {
+          "nome": "Projetor",
+          "quantidade": 1
+        },
+        {
+          "nome": "Computador do professor",
+          "quantidade": 1
+        }
+      ],
+      "softwares": [
+        {
+          "nome": "Pacote padrao de laboratorio"
+        }
+      ],
+      "restricoesUso": [
+        "Detalhes mockados para ambiente de desenvolvimento"
+      ],
+      "manutencao": {
+        "status": "operacional",
+        "prioridadePreventiva": "normal",
+        "proximaRevisaoSimulada": "2026-12-31",
+        "observacao": "Informacao gerada a partir do seed local"
+      },
+      "observacoes": [
+        "Dados complementares mockados para popular o ambiente local"
+      ],
+      "fonteDetalhes": "mock_local",
+      "nivelConfiancaDetalhes": "simulado"
+    },
+    {
+      "nome": "Sala 11",
+      "localizacao": "FATEC",
+      "capacidadeAlunos": 30,
+      "computadores": 30,
+      "tipoAmbiente": "laboratorio",
+      "recursos": {
+        "espelhamentoPor": "Projetor",
+        "lousa": "Lousa branca",
+        "internet": "Cabeada e Wi-Fi",
+        "climatizacao": "Ar-condicionado",
+        "mobiliario": [
+          "Mesas",
+          "Cadeiras"
+        ]
+      },
+      "equipamentos": [
+        {
+          "nome": "Projetor",
+          "quantidade": 1
+        },
+        {
+          "nome": "Computador do professor",
+          "quantidade": 1
+        }
+      ],
+      "softwares": [
+        {
+          "nome": "Pacote padrao de laboratorio"
+        }
+      ],
+      "restricoesUso": [
+        "Detalhes mockados para ambiente de desenvolvimento"
+      ],
+      "manutencao": {
+        "status": "operacional",
+        "prioridadePreventiva": "normal",
+        "proximaRevisaoSimulada": "2026-12-31",
+        "observacao": "Informacao gerada a partir do seed local"
+      },
+      "observacoes": [
+        "Dados complementares mockados para popular o ambiente local"
+      ],
+      "fonteDetalhes": "mock_local",
+      "nivelConfiancaDetalhes": "simulado"
+    },
+    {
+      "nome": "Sala 13",
+      "localizacao": "FATEC",
+      "capacidadeAlunos": 30,
+      "computadores": 30,
+      "tipoAmbiente": "laboratorio",
+      "recursos": {
+        "espelhamentoPor": "Projetor",
+        "lousa": "Lousa branca",
+        "internet": "Cabeada e Wi-Fi",
+        "climatizacao": "Ar-condicionado",
+        "mobiliario": [
+          "Mesas",
+          "Cadeiras"
+        ]
+      },
+      "equipamentos": [
+        {
+          "nome": "Projetor",
+          "quantidade": 1
+        },
+        {
+          "nome": "Computador do professor",
+          "quantidade": 1
+        }
+      ],
+      "softwares": [
+        {
+          "nome": "Pacote padrao de laboratorio"
+        }
+      ],
+      "restricoesUso": [
+        "Detalhes mockados para ambiente de desenvolvimento"
+      ],
+      "manutencao": {
+        "status": "operacional",
+        "prioridadePreventiva": "normal",
+        "proximaRevisaoSimulada": "2026-12-31",
+        "observacao": "Informacao gerada a partir do seed local"
+      },
+      "observacoes": [
+        "Dados complementares mockados para popular o ambiente local"
+      ],
+      "fonteDetalhes": "mock_local",
+      "nivelConfiancaDetalhes": "simulado"
+    },
+    {
+      "nome": "Sala 14",
+      "localizacao": "FATEC",
+      "capacidadeAlunos": 30,
+      "computadores": 30,
+      "tipoAmbiente": "laboratorio",
+      "recursos": {
+        "espelhamentoPor": "Projetor",
+        "lousa": "Lousa branca",
+        "internet": "Cabeada e Wi-Fi",
+        "climatizacao": "Ar-condicionado",
+        "mobiliario": [
+          "Mesas",
+          "Cadeiras"
+        ]
+      },
+      "equipamentos": [
+        {
+          "nome": "Projetor",
+          "quantidade": 1
+        },
+        {
+          "nome": "Computador do professor",
+          "quantidade": 1
+        }
+      ],
+      "softwares": [
+        {
+          "nome": "Pacote padrao de laboratorio"
+        }
+      ],
+      "restricoesUso": [
+        "Detalhes mockados para ambiente de desenvolvimento"
+      ],
+      "manutencao": {
+        "status": "operacional",
+        "prioridadePreventiva": "normal",
+        "proximaRevisaoSimulada": "2026-12-31",
+        "observacao": "Informacao gerada a partir do seed local"
+      },
+      "observacoes": [
+        "Dados complementares mockados para popular o ambiente local"
+      ],
+      "fonteDetalhes": "mock_local",
+      "nivelConfiancaDetalhes": "simulado"
+    },
+    {
+      "nome": "Sala 15",
+      "localizacao": "FATEC",
+      "capacidadeAlunos": 30,
+      "computadores": 30,
+      "tipoAmbiente": "laboratorio",
+      "recursos": {
+        "espelhamentoPor": "Projetor",
+        "lousa": "Lousa branca",
+        "internet": "Cabeada e Wi-Fi",
+        "climatizacao": "Ar-condicionado",
+        "mobiliario": [
+          "Mesas",
+          "Cadeiras"
+        ]
+      },
+      "equipamentos": [
+        {
+          "nome": "Projetor",
+          "quantidade": 1
+        },
+        {
+          "nome": "Computador do professor",
+          "quantidade": 1
+        }
+      ],
+      "softwares": [
+        {
+          "nome": "Pacote padrao de laboratorio"
+        }
+      ],
+      "restricoesUso": [
+        "Detalhes mockados para ambiente de desenvolvimento"
+      ],
+      "manutencao": {
+        "status": "operacional",
+        "prioridadePreventiva": "normal",
+        "proximaRevisaoSimulada": "2026-12-31",
+        "observacao": "Informacao gerada a partir do seed local"
+      },
+      "observacoes": [
+        "Dados complementares mockados para popular o ambiente local"
+      ],
+      "fonteDetalhes": "mock_local",
+      "nivelConfiancaDetalhes": "simulado"
+    },
+    {
+      "nome": "Sala 16",
+      "localizacao": "FATEC",
+      "capacidadeAlunos": 30,
+      "computadores": 30,
+      "tipoAmbiente": "laboratorio",
+      "recursos": {
+        "espelhamentoPor": "Projetor",
+        "lousa": "Lousa branca",
+        "internet": "Cabeada e Wi-Fi",
+        "climatizacao": "Ar-condicionado",
+        "mobiliario": [
+          "Mesas",
+          "Cadeiras"
+        ]
+      },
+      "equipamentos": [
+        {
+          "nome": "Projetor",
+          "quantidade": 1
+        },
+        {
+          "nome": "Computador do professor",
+          "quantidade": 1
+        }
+      ],
+      "softwares": [
+        {
+          "nome": "Pacote padrao de laboratorio"
+        }
+      ],
+      "restricoesUso": [
+        "Detalhes mockados para ambiente de desenvolvimento"
+      ],
+      "manutencao": {
+        "status": "operacional",
+        "prioridadePreventiva": "normal",
+        "proximaRevisaoSimulada": "2026-12-31",
+        "observacao": "Informacao gerada a partir do seed local"
+      },
+      "observacoes": [
+        "Dados complementares mockados para popular o ambiente local"
+      ],
+      "fonteDetalhes": "mock_local",
+      "nivelConfiancaDetalhes": "simulado"
+    },
+    {
+      "nome": "Sala 17",
+      "localizacao": "FATEC",
+      "capacidadeAlunos": 30,
+      "computadores": 30,
+      "tipoAmbiente": "laboratorio",
+      "recursos": {
+        "espelhamentoPor": "Projetor",
+        "lousa": "Lousa branca",
+        "internet": "Cabeada e Wi-Fi",
+        "climatizacao": "Ar-condicionado",
+        "mobiliario": [
+          "Mesas",
+          "Cadeiras"
+        ]
+      },
+      "equipamentos": [
+        {
+          "nome": "Projetor",
+          "quantidade": 1
+        },
+        {
+          "nome": "Computador do professor",
+          "quantidade": 1
+        }
+      ],
+      "softwares": [
+        {
+          "nome": "Pacote padrao de laboratorio"
+        }
+      ],
+      "restricoesUso": [
+        "Detalhes mockados para ambiente de desenvolvimento"
+      ],
+      "manutencao": {
+        "status": "operacional",
+        "prioridadePreventiva": "normal",
+        "proximaRevisaoSimulada": "2026-12-31",
+        "observacao": "Informacao gerada a partir do seed local"
+      },
+      "observacoes": [
+        "Dados complementares mockados para popular o ambiente local"
+      ],
+      "fonteDetalhes": "mock_local",
+      "nivelConfiancaDetalhes": "simulado"
+    },
+    {
+      "nome": "Sala 18",
+      "localizacao": "FATEC",
+      "capacidadeAlunos": 30,
+      "computadores": 30,
+      "tipoAmbiente": "laboratorio",
+      "recursos": {
+        "espelhamentoPor": "Projetor",
+        "lousa": "Lousa branca",
+        "internet": "Cabeada e Wi-Fi",
+        "climatizacao": "Ar-condicionado",
+        "mobiliario": [
+          "Mesas",
+          "Cadeiras"
+        ]
+      },
+      "equipamentos": [
+        {
+          "nome": "Projetor",
+          "quantidade": 1
+        },
+        {
+          "nome": "Computador do professor",
+          "quantidade": 1
+        }
+      ],
+      "softwares": [
+        {
+          "nome": "Pacote padrao de laboratorio"
+        }
+      ],
+      "restricoesUso": [
+        "Detalhes mockados para ambiente de desenvolvimento"
+      ],
+      "manutencao": {
+        "status": "operacional",
+        "prioridadePreventiva": "normal",
+        "proximaRevisaoSimulada": "2026-12-31",
+        "observacao": "Informacao gerada a partir do seed local"
+      },
+      "observacoes": [
+        "Dados complementares mockados para popular o ambiente local"
+      ],
+      "fonteDetalhes": "mock_local",
+      "nivelConfiancaDetalhes": "simulado"
+    },
+    {
+      "nome": "Sala 19",
+      "localizacao": "FATEC",
+      "capacidadeAlunos": 30,
+      "computadores": 30,
+      "tipoAmbiente": "laboratorio",
+      "recursos": {
+        "espelhamentoPor": "Projetor",
+        "lousa": "Lousa branca",
+        "internet": "Cabeada e Wi-Fi",
+        "climatizacao": "Ar-condicionado",
+        "mobiliario": [
+          "Mesas",
+          "Cadeiras"
+        ]
+      },
+      "equipamentos": [
+        {
+          "nome": "Projetor",
+          "quantidade": 1
+        },
+        {
+          "nome": "Computador do professor",
+          "quantidade": 1
+        }
+      ],
+      "softwares": [
+        {
+          "nome": "Pacote padrao de laboratorio"
+        }
+      ],
+      "restricoesUso": [
+        "Detalhes mockados para ambiente de desenvolvimento"
+      ],
+      "manutencao": {
+        "status": "operacional",
+        "prioridadePreventiva": "normal",
+        "proximaRevisaoSimulada": "2026-12-31",
+        "observacao": "Informacao gerada a partir do seed local"
+      },
+      "observacoes": [
+        "Dados complementares mockados para popular o ambiente local"
+      ],
+      "fonteDetalhes": "mock_local",
+      "nivelConfiancaDetalhes": "simulado"
+    },
+    {
+      "nome": "Sala 20",
+      "localizacao": "FATEC",
+      "capacidadeAlunos": 30,
+      "computadores": 30,
+      "tipoAmbiente": "laboratorio",
+      "recursos": {
+        "espelhamentoPor": "Projetor",
+        "lousa": "Lousa branca",
+        "internet": "Cabeada e Wi-Fi",
+        "climatizacao": "Ar-condicionado",
+        "mobiliario": [
+          "Mesas",
+          "Cadeiras"
+        ]
+      },
+      "equipamentos": [
+        {
+          "nome": "Projetor",
+          "quantidade": 1
+        },
+        {
+          "nome": "Computador do professor",
+          "quantidade": 1
+        }
+      ],
+      "softwares": [
+        {
+          "nome": "Pacote padrao de laboratorio"
+        }
+      ],
+      "restricoesUso": [
+        "Detalhes mockados para ambiente de desenvolvimento"
+      ],
+      "manutencao": {
+        "status": "operacional",
+        "prioridadePreventiva": "normal",
+        "proximaRevisaoSimulada": "2026-12-31",
+        "observacao": "Informacao gerada a partir do seed local"
+      },
+      "observacoes": [
+        "Dados complementares mockados para popular o ambiente local"
+      ],
+      "fonteDetalhes": "mock_local",
+      "nivelConfiancaDetalhes": "simulado"
+    },
+    {
+      "nome": "Sala 21",
+      "localizacao": "FATEC",
+      "capacidadeAlunos": 30,
+      "computadores": 30,
+      "tipoAmbiente": "laboratorio",
+      "recursos": {
+        "espelhamentoPor": "Projetor",
+        "lousa": "Lousa branca",
+        "internet": "Cabeada e Wi-Fi",
+        "climatizacao": "Ar-condicionado",
+        "mobiliario": [
+          "Mesas",
+          "Cadeiras"
+        ]
+      },
+      "equipamentos": [
+        {
+          "nome": "Projetor",
+          "quantidade": 1
+        },
+        {
+          "nome": "Computador do professor",
+          "quantidade": 1
+        }
+      ],
+      "softwares": [
+        {
+          "nome": "Pacote padrao de laboratorio"
+        }
+      ],
+      "restricoesUso": [
+        "Detalhes mockados para ambiente de desenvolvimento"
+      ],
+      "manutencao": {
+        "status": "operacional",
+        "prioridadePreventiva": "normal",
+        "proximaRevisaoSimulada": "2026-12-31",
+        "observacao": "Informacao gerada a partir do seed local"
+      },
+      "observacoes": [
+        "Dados complementares mockados para popular o ambiente local"
+      ],
+      "fonteDetalhes": "mock_local",
+      "nivelConfiancaDetalhes": "simulado"
+    },
+    {
+      "nome": "Sala 22",
+      "localizacao": "FATEC",
+      "capacidadeAlunos": 30,
+      "computadores": 30,
+      "tipoAmbiente": "laboratorio",
+      "recursos": {
+        "espelhamentoPor": "Projetor",
+        "lousa": "Lousa branca",
+        "internet": "Cabeada e Wi-Fi",
+        "climatizacao": "Ar-condicionado",
+        "mobiliario": [
+          "Mesas",
+          "Cadeiras"
+        ]
+      },
+      "equipamentos": [
+        {
+          "nome": "Projetor",
+          "quantidade": 1
+        },
+        {
+          "nome": "Computador do professor",
+          "quantidade": 1
+        }
+      ],
+      "softwares": [
+        {
+          "nome": "Pacote padrao de laboratorio"
+        }
+      ],
+      "restricoesUso": [
+        "Detalhes mockados para ambiente de desenvolvimento"
+      ],
+      "manutencao": {
+        "status": "operacional",
+        "prioridadePreventiva": "normal",
+        "proximaRevisaoSimulada": "2026-12-31",
+        "observacao": "Informacao gerada a partir do seed local"
+      },
+      "observacoes": [
+        "Dados complementares mockados para popular o ambiente local"
+      ],
+      "fonteDetalhes": "mock_local",
+      "nivelConfiancaDetalhes": "simulado"
+    },
+    {
+      "nome": "Sala 23",
+      "localizacao": "FATEC",
+      "capacidadeAlunos": 30,
+      "computadores": 30,
+      "tipoAmbiente": "laboratorio",
+      "recursos": {
+        "espelhamentoPor": "Projetor",
+        "lousa": "Lousa branca",
+        "internet": "Cabeada e Wi-Fi",
+        "climatizacao": "Ar-condicionado",
+        "mobiliario": [
+          "Mesas",
+          "Cadeiras"
+        ]
+      },
+      "equipamentos": [
+        {
+          "nome": "Projetor",
+          "quantidade": 1
+        },
+        {
+          "nome": "Computador do professor",
+          "quantidade": 1
+        }
+      ],
+      "softwares": [
+        {
+          "nome": "Pacote padrao de laboratorio"
+        }
+      ],
+      "restricoesUso": [
+        "Detalhes mockados para ambiente de desenvolvimento"
+      ],
+      "manutencao": {
+        "status": "operacional",
+        "prioridadePreventiva": "normal",
+        "proximaRevisaoSimulada": "2026-12-31",
+        "observacao": "Informacao gerada a partir do seed local"
+      },
+      "observacoes": [
+        "Dados complementares mockados para popular o ambiente local"
+      ],
+      "fonteDetalhes": "mock_local",
+      "nivelConfiancaDetalhes": "simulado"
+    },
+    {
+      "nome": "Sala 24",
+      "localizacao": "FATEC",
+      "capacidadeAlunos": 30,
+      "computadores": 30,
+      "tipoAmbiente": "laboratorio",
+      "recursos": {
+        "espelhamentoPor": "Projetor",
+        "lousa": "Lousa branca",
+        "internet": "Cabeada e Wi-Fi",
+        "climatizacao": "Ar-condicionado",
+        "mobiliario": [
+          "Mesas",
+          "Cadeiras"
+        ]
+      },
+      "equipamentos": [
+        {
+          "nome": "Projetor",
+          "quantidade": 1
+        },
+        {
+          "nome": "Computador do professor",
+          "quantidade": 1
+        }
+      ],
+      "softwares": [
+        {
+          "nome": "Pacote padrao de laboratorio"
+        }
+      ],
+      "restricoesUso": [
+        "Detalhes mockados para ambiente de desenvolvimento"
+      ],
+      "manutencao": {
+        "status": "operacional",
+        "prioridadePreventiva": "normal",
+        "proximaRevisaoSimulada": "2026-12-31",
+        "observacao": "Informacao gerada a partir do seed local"
+      },
+      "observacoes": [
+        "Dados complementares mockados para popular o ambiente local"
+      ],
+      "fonteDetalhes": "mock_local",
+      "nivelConfiancaDetalhes": "simulado"
+    },
+    {
+      "nome": "Sala 25",
+      "localizacao": "FATEC",
+      "capacidadeAlunos": 30,
+      "computadores": 30,
+      "tipoAmbiente": "laboratorio",
+      "recursos": {
+        "espelhamentoPor": "Projetor",
+        "lousa": "Lousa branca",
+        "internet": "Cabeada e Wi-Fi",
+        "climatizacao": "Ar-condicionado",
+        "mobiliario": [
+          "Mesas",
+          "Cadeiras"
+        ]
+      },
+      "equipamentos": [
+        {
+          "nome": "Projetor",
+          "quantidade": 1
+        },
+        {
+          "nome": "Computador do professor",
+          "quantidade": 1
+        }
+      ],
+      "softwares": [
+        {
+          "nome": "Pacote padrao de laboratorio"
+        }
+      ],
+      "restricoesUso": [
+        "Detalhes mockados para ambiente de desenvolvimento"
+      ],
+      "manutencao": {
+        "status": "operacional",
+        "prioridadePreventiva": "normal",
+        "proximaRevisaoSimulada": "2026-12-31",
+        "observacao": "Informacao gerada a partir do seed local"
+      },
+      "observacoes": [
+        "Dados complementares mockados para popular o ambiente local"
+      ],
+      "fonteDetalhes": "mock_local",
+      "nivelConfiancaDetalhes": "simulado"
+    },
+    {
+      "nome": "Sala 26",
+      "localizacao": "FATEC",
+      "capacidadeAlunos": 30,
+      "computadores": 30,
+      "tipoAmbiente": "laboratorio",
+      "recursos": {
+        "espelhamentoPor": "Projetor",
+        "lousa": "Lousa branca",
+        "internet": "Cabeada e Wi-Fi",
+        "climatizacao": "Ar-condicionado",
+        "mobiliario": [
+          "Mesas",
+          "Cadeiras"
+        ]
+      },
+      "equipamentos": [
+        {
+          "nome": "Projetor",
+          "quantidade": 1
+        },
+        {
+          "nome": "Computador do professor",
+          "quantidade": 1
+        }
+      ],
+      "softwares": [
+        {
+          "nome": "Pacote padrao de laboratorio"
+        }
+      ],
+      "restricoesUso": [
+        "Detalhes mockados para ambiente de desenvolvimento"
+      ],
+      "manutencao": {
+        "status": "operacional",
+        "prioridadePreventiva": "normal",
+        "proximaRevisaoSimulada": "2026-12-31",
+        "observacao": "Informacao gerada a partir do seed local"
+      },
+      "observacoes": [
+        "Dados complementares mockados para popular o ambiente local"
+      ],
+      "fonteDetalhes": "mock_local",
+      "nivelConfiancaDetalhes": "simulado"
+    },
+    {
+      "nome": "Sala 27",
+      "localizacao": "FATEC",
+      "capacidadeAlunos": 30,
+      "computadores": 30,
+      "tipoAmbiente": "laboratorio",
+      "recursos": {
+        "espelhamentoPor": "Projetor",
+        "lousa": "Lousa branca",
+        "internet": "Cabeada e Wi-Fi",
+        "climatizacao": "Ar-condicionado",
+        "mobiliario": [
+          "Mesas",
+          "Cadeiras"
+        ]
+      },
+      "equipamentos": [
+        {
+          "nome": "Projetor",
+          "quantidade": 1
+        },
+        {
+          "nome": "Computador do professor",
+          "quantidade": 1
+        }
+      ],
+      "softwares": [
+        {
+          "nome": "Pacote padrao de laboratorio"
+        }
+      ],
+      "restricoesUso": [
+        "Detalhes mockados para ambiente de desenvolvimento"
+      ],
+      "manutencao": {
+        "status": "operacional",
+        "prioridadePreventiva": "normal",
+        "proximaRevisaoSimulada": "2026-12-31",
+        "observacao": "Informacao gerada a partir do seed local"
+      },
+      "observacoes": [
+        "Dados complementares mockados para popular o ambiente local"
+      ],
+      "fonteDetalhes": "mock_local",
+      "nivelConfiancaDetalhes": "simulado"
+    },
+    {
+      "nome": "Sala 28",
+      "localizacao": "FATEC",
+      "capacidadeAlunos": 30,
+      "computadores": 30,
+      "tipoAmbiente": "laboratorio",
+      "recursos": {
+        "espelhamentoPor": "Projetor",
+        "lousa": "Lousa branca",
+        "internet": "Cabeada e Wi-Fi",
+        "climatizacao": "Ar-condicionado",
+        "mobiliario": [
+          "Mesas",
+          "Cadeiras"
+        ]
+      },
+      "equipamentos": [
+        {
+          "nome": "Projetor",
+          "quantidade": 1
+        },
+        {
+          "nome": "Computador do professor",
+          "quantidade": 1
+        }
+      ],
+      "softwares": [
+        {
+          "nome": "Pacote padrao de laboratorio"
+        }
+      ],
+      "restricoesUso": [
+        "Detalhes mockados para ambiente de desenvolvimento"
+      ],
+      "manutencao": {
+        "status": "operacional",
+        "prioridadePreventiva": "normal",
+        "proximaRevisaoSimulada": "2026-12-31",
+        "observacao": "Informacao gerada a partir do seed local"
+      },
+      "observacoes": [
+        "Dados complementares mockados para popular o ambiente local"
+      ],
+      "fonteDetalhes": "mock_local",
+      "nivelConfiancaDetalhes": "simulado"
+    },
+    {
+      "nome": "Sala 29",
+      "localizacao": "FATEC",
+      "capacidadeAlunos": 30,
+      "computadores": 30,
+      "tipoAmbiente": "laboratorio",
+      "recursos": {
+        "espelhamentoPor": "Projetor",
+        "lousa": "Lousa branca",
+        "internet": "Cabeada e Wi-Fi",
+        "climatizacao": "Ar-condicionado",
+        "mobiliario": [
+          "Mesas",
+          "Cadeiras"
+        ]
+      },
+      "equipamentos": [
+        {
+          "nome": "Projetor",
+          "quantidade": 1
+        },
+        {
+          "nome": "Computador do professor",
+          "quantidade": 1
+        }
+      ],
+      "softwares": [
+        {
+          "nome": "Pacote padrao de laboratorio"
+        }
+      ],
+      "restricoesUso": [
+        "Detalhes mockados para ambiente de desenvolvimento"
+      ],
+      "manutencao": {
+        "status": "operacional",
+        "prioridadePreventiva": "normal",
+        "proximaRevisaoSimulada": "2026-12-31",
+        "observacao": "Informacao gerada a partir do seed local"
+      },
+      "observacoes": [
+        "Dados complementares mockados para popular o ambiente local"
+      ],
+      "fonteDetalhes": "mock_local",
+      "nivelConfiancaDetalhes": "simulado"
+    },
+    {
+      "nome": "Sala 30",
+      "localizacao": "FATEC",
+      "capacidadeAlunos": 30,
+      "computadores": 30,
+      "tipoAmbiente": "laboratorio",
+      "recursos": {
+        "espelhamentoPor": "Projetor",
+        "lousa": "Lousa branca",
+        "internet": "Cabeada e Wi-Fi",
+        "climatizacao": "Ar-condicionado",
+        "mobiliario": [
+          "Mesas",
+          "Cadeiras"
+        ]
+      },
+      "equipamentos": [
+        {
+          "nome": "Projetor",
+          "quantidade": 1
+        },
+        {
+          "nome": "Computador do professor",
+          "quantidade": 1
+        }
+      ],
+      "softwares": [
+        {
+          "nome": "Pacote padrao de laboratorio"
+        }
+      ],
+      "restricoesUso": [
+        "Detalhes mockados para ambiente de desenvolvimento"
+      ],
+      "manutencao": {
+        "status": "operacional",
+        "prioridadePreventiva": "normal",
+        "proximaRevisaoSimulada": "2026-12-31",
+        "observacao": "Informacao gerada a partir do seed local"
+      },
+      "observacoes": [
+        "Dados complementares mockados para popular o ambiente local"
+      ],
+      "fonteDetalhes": "mock_local",
+      "nivelConfiancaDetalhes": "simulado"
+    },
+    {
+      "nome": "Sala 31",
+      "localizacao": "FATEC",
+      "capacidadeAlunos": 30,
+      "computadores": 30,
+      "tipoAmbiente": "laboratorio",
+      "recursos": {
+        "espelhamentoPor": "Projetor",
+        "lousa": "Lousa branca",
+        "internet": "Cabeada e Wi-Fi",
+        "climatizacao": "Ar-condicionado",
+        "mobiliario": [
+          "Mesas",
+          "Cadeiras"
+        ]
+      },
+      "equipamentos": [
+        {
+          "nome": "Projetor",
+          "quantidade": 1
+        },
+        {
+          "nome": "Computador do professor",
+          "quantidade": 1
+        }
+      ],
+      "softwares": [
+        {
+          "nome": "Pacote padrao de laboratorio"
+        }
+      ],
+      "restricoesUso": [
+        "Detalhes mockados para ambiente de desenvolvimento"
+      ],
+      "manutencao": {
+        "status": "operacional",
+        "prioridadePreventiva": "normal",
+        "proximaRevisaoSimulada": "2026-12-31",
+        "observacao": "Informacao gerada a partir do seed local"
+      },
+      "observacoes": [
+        "Dados complementares mockados para popular o ambiente local"
+      ],
+      "fonteDetalhes": "mock_local",
+      "nivelConfiancaDetalhes": "simulado"
+    },
+    {
+      "nome": "Sala 32",
+      "localizacao": "FATEC",
+      "capacidadeAlunos": 30,
+      "computadores": 30,
+      "tipoAmbiente": "laboratorio",
+      "recursos": {
+        "espelhamentoPor": "Projetor",
+        "lousa": "Lousa branca",
+        "internet": "Cabeada e Wi-Fi",
+        "climatizacao": "Ar-condicionado",
+        "mobiliario": [
+          "Mesas",
+          "Cadeiras"
+        ]
+      },
+      "equipamentos": [
+        {
+          "nome": "Projetor",
+          "quantidade": 1
+        },
+        {
+          "nome": "Computador do professor",
+          "quantidade": 1
+        }
+      ],
+      "softwares": [
+        {
+          "nome": "Pacote padrao de laboratorio"
+        }
+      ],
+      "restricoesUso": [
+        "Detalhes mockados para ambiente de desenvolvimento"
+      ],
+      "manutencao": {
+        "status": "operacional",
+        "prioridadePreventiva": "normal",
+        "proximaRevisaoSimulada": "2026-12-31",
+        "observacao": "Informacao gerada a partir do seed local"
+      },
+      "observacoes": [
+        "Dados complementares mockados para popular o ambiente local"
+      ],
+      "fonteDetalhes": "mock_local",
+      "nivelConfiancaDetalhes": "simulado"
+    },
+    {
+      "nome": "Sala 33",
+      "localizacao": "FATEC",
+      "capacidadeAlunos": 30,
+      "computadores": 30,
+      "tipoAmbiente": "laboratorio",
+      "recursos": {
+        "espelhamentoPor": "Projetor",
+        "lousa": "Lousa branca",
+        "internet": "Cabeada e Wi-Fi",
+        "climatizacao": "Ar-condicionado",
+        "mobiliario": [
+          "Mesas",
+          "Cadeiras"
+        ]
+      },
+      "equipamentos": [
+        {
+          "nome": "Projetor",
+          "quantidade": 1
+        },
+        {
+          "nome": "Computador do professor",
+          "quantidade": 1
+        }
+      ],
+      "softwares": [
+        {
+          "nome": "Pacote padrao de laboratorio"
+        }
+      ],
+      "restricoesUso": [
+        "Detalhes mockados para ambiente de desenvolvimento"
+      ],
+      "manutencao": {
+        "status": "operacional",
+        "prioridadePreventiva": "normal",
+        "proximaRevisaoSimulada": "2026-12-31",
+        "observacao": "Informacao gerada a partir do seed local"
+      },
+      "observacoes": [
+        "Dados complementares mockados para popular o ambiente local"
+      ],
+      "fonteDetalhes": "mock_local",
+      "nivelConfiancaDetalhes": "simulado"
+    },
+    {
+      "nome": "Sala 34",
+      "localizacao": "FATEC",
+      "capacidadeAlunos": 30,
+      "computadores": 30,
+      "tipoAmbiente": "laboratorio",
+      "recursos": {
+        "espelhamentoPor": "Projetor",
+        "lousa": "Lousa branca",
+        "internet": "Cabeada e Wi-Fi",
+        "climatizacao": "Ar-condicionado",
+        "mobiliario": [
+          "Mesas",
+          "Cadeiras"
+        ]
+      },
+      "equipamentos": [
+        {
+          "nome": "Projetor",
+          "quantidade": 1
+        },
+        {
+          "nome": "Computador do professor",
+          "quantidade": 1
+        }
+      ],
+      "softwares": [
+        {
+          "nome": "Pacote padrao de laboratorio"
+        }
+      ],
+      "restricoesUso": [
+        "Detalhes mockados para ambiente de desenvolvimento"
+      ],
+      "manutencao": {
+        "status": "operacional",
+        "prioridadePreventiva": "normal",
+        "proximaRevisaoSimulada": "2026-12-31",
+        "observacao": "Informacao gerada a partir do seed local"
+      },
+      "observacoes": [
+        "Dados complementares mockados para popular o ambiente local"
+      ],
+      "fonteDetalhes": "mock_local",
+      "nivelConfiancaDetalhes": "simulado"
+    },
+    {
+      "nome": "Sala Maker",
+      "localizacao": "FATEC",
+      "capacidadeAlunos": 30,
+      "computadores": 30,
+      "tipoAmbiente": "laboratorio",
+      "recursos": {
+        "espelhamentoPor": "Projetor",
+        "lousa": "Lousa branca",
+        "internet": "Cabeada e Wi-Fi",
+        "climatizacao": "Ar-condicionado",
+        "mobiliario": [
+          "Mesas",
+          "Cadeiras"
+        ]
+      },
+      "equipamentos": [
+        {
+          "nome": "Projetor",
+          "quantidade": 1
+        },
+        {
+          "nome": "Computador do professor",
+          "quantidade": 1
+        }
+      ],
+      "softwares": [
+        {
+          "nome": "Pacote padrao de laboratorio"
+        }
+      ],
+      "restricoesUso": [
+        "Detalhes mockados para ambiente de desenvolvimento"
+      ],
+      "manutencao": {
+        "status": "operacional",
+        "prioridadePreventiva": "normal",
+        "proximaRevisaoSimulada": "2026-12-31",
+        "observacao": "Informacao gerada a partir do seed local"
+      },
+      "observacoes": [
+        "Dados complementares mockados para popular o ambiente local"
+      ],
+      "fonteDetalhes": "mock_local",
+      "nivelConfiancaDetalhes": "simulado"
+    },
+    {
+      "nome": "Soldagem",
+      "localizacao": "FATEC",
+      "capacidadeAlunos": 30,
+      "computadores": 30,
+      "tipoAmbiente": "laboratorio",
+      "recursos": {
+        "espelhamentoPor": "Projetor",
+        "lousa": "Lousa branca",
+        "internet": "Cabeada e Wi-Fi",
+        "climatizacao": "Ar-condicionado",
+        "mobiliario": [
+          "Mesas",
+          "Cadeiras"
+        ]
+      },
+      "equipamentos": [
+        {
+          "nome": "Projetor",
+          "quantidade": 1
+        },
+        {
+          "nome": "Computador do professor",
+          "quantidade": 1
+        }
+      ],
+      "softwares": [
+        {
+          "nome": "Pacote padrao de laboratorio"
+        }
+      ],
+      "restricoesUso": [
+        "Detalhes mockados para ambiente de desenvolvimento"
+      ],
+      "manutencao": {
+        "status": "operacional",
+        "prioridadePreventiva": "normal",
+        "proximaRevisaoSimulada": "2026-12-31",
+        "observacao": "Informacao gerada a partir do seed local"
+      },
+      "observacoes": [
+        "Dados complementares mockados para popular o ambiente local"
+      ],
+      "fonteDetalhes": "mock_local",
+      "nivelConfiancaDetalhes": "simulado"
+    },
+    {
+      "nome": "Usinagem",
+      "localizacao": "FATEC",
+      "capacidadeAlunos": 30,
+      "computadores": 30,
+      "tipoAmbiente": "laboratorio",
+      "recursos": {
+        "espelhamentoPor": "Projetor",
+        "lousa": "Lousa branca",
+        "internet": "Cabeada e Wi-Fi",
+        "climatizacao": "Ar-condicionado",
+        "mobiliario": [
+          "Mesas",
+          "Cadeiras"
+        ]
+      },
+      "equipamentos": [
+        {
+          "nome": "Projetor",
+          "quantidade": 1
+        },
+        {
+          "nome": "Computador do professor",
+          "quantidade": 1
+        }
+      ],
+      "softwares": [
+        {
+          "nome": "Pacote padrao de laboratorio"
+        }
+      ],
+      "restricoesUso": [
+        "Detalhes mockados para ambiente de desenvolvimento"
+      ],
+      "manutencao": {
+        "status": "operacional",
+        "prioridadePreventiva": "normal",
+        "proximaRevisaoSimulada": "2026-12-31",
+        "observacao": "Informacao gerada a partir do seed local"
+      },
+      "observacoes": [
+        "Dados complementares mockados para popular o ambiente local"
+      ],
+      "fonteDetalhes": "mock_local",
+      "nivelConfiancaDetalhes": "simulado"
+    },
+    {
+      "nome": "Ventilação",
+      "localizacao": "FATEC",
+      "capacidadeAlunos": 30,
+      "computadores": 30,
+      "tipoAmbiente": "laboratorio",
+      "recursos": {
+        "espelhamentoPor": "Projetor",
+        "lousa": "Lousa branca",
+        "internet": "Cabeada e Wi-Fi",
+        "climatizacao": "Ar-condicionado",
+        "mobiliario": [
+          "Mesas",
+          "Cadeiras"
+        ]
+      },
+      "equipamentos": [
+        {
+          "nome": "Projetor",
+          "quantidade": 1
+        },
+        {
+          "nome": "Computador do professor",
+          "quantidade": 1
+        }
+      ],
+      "softwares": [
+        {
+          "nome": "Pacote padrao de laboratorio"
+        }
+      ],
+      "restricoesUso": [
+        "Detalhes mockados para ambiente de desenvolvimento"
+      ],
+      "manutencao": {
+        "status": "operacional",
+        "prioridadePreventiva": "normal",
+        "proximaRevisaoSimulada": "2026-12-31",
+        "observacao": "Informacao gerada a partir do seed local"
+      },
+      "observacoes": [
+        "Dados complementares mockados para popular o ambiente local"
+      ],
+      "fonteDetalhes": "mock_local",
+      "nivelConfiancaDetalhes": "simulado"
+    },
+    {
+      "nome": "Notebooks 38",
+      "localizacao": "FATEC",
+      "capacidadeAlunos": 30,
+      "computadores": 30,
+      "tipoAmbiente": "laboratorio m?vel",
+      "recursos": {
+        "espelhamentoPor": "Projetor",
+        "lousa": "Lousa branca",
+        "internet": "Cabeada e Wi-Fi",
+        "climatizacao": "Ar-condicionado",
+        "mobiliario": [
+          "Mesas",
+          "Cadeiras"
+        ]
+      },
+      "equipamentos": [
+        {
+          "nome": "Projetor",
+          "quantidade": 1
+        },
+        {
+          "nome": "Notebook",
+          "quantidade": 30
+        },
+        {
+          "nome": "Computador do professor",
+          "quantidade": 1
+        }
+      ],
+      "softwares": [
+        {
+          "nome": "Pacote padrao de laboratorio"
+        }
+      ],
+      "restricoesUso": [
+        "Detalhes mockados para ambiente de desenvolvimento"
+      ],
+      "manutencao": {
+        "status": "operacional",
+        "prioridadePreventiva": "normal",
+        "proximaRevisaoSimulada": "2026-12-31",
+        "observacao": "Informacao gerada a partir do seed local"
+      },
+      "observacoes": [
+        "Dados complementares mockados para popular o ambiente local"
+      ],
+      "fonteDetalhes": "mock_local",
+      "nivelConfiancaDetalhes": "simulado"
+    },
+    {
+      "nome": "Notebooks 36-B",
+      "localizacao": "FATEC",
+      "capacidadeAlunos": 30,
+      "computadores": 30,
+      "tipoAmbiente": "laboratorio m?vel",
+      "recursos": {
+        "espelhamentoPor": "Projetor",
+        "lousa": "Lousa branca",
+        "internet": "Cabeada e Wi-Fi",
+        "climatizacao": "Ar-condicionado",
+        "mobiliario": [
+          "Mesas",
+          "Cadeiras"
+        ]
+      },
+      "equipamentos": [
+        {
+          "nome": "Projetor",
+          "quantidade": 1
+        },
+        {
+          "nome": "Notebook",
+          "quantidade": 30
+        },
+        {
+          "nome": "Computador do professor",
+          "quantidade": 1
+        }
+      ],
+      "softwares": [
+        {
+          "nome": "Pacote padrao de laboratorio"
+        }
+      ],
+      "restricoesUso": [
+        "Detalhes mockados para ambiente de desenvolvimento"
+      ],
+      "manutencao": {
+        "status": "operacional",
+        "prioridadePreventiva": "normal",
+        "proximaRevisaoSimulada": "2026-12-31",
+        "observacao": "Informacao gerada a partir do seed local"
+      },
+      "observacoes": [
+        "Dados complementares mockados para popular o ambiente local"
+      ],
+      "fonteDetalhes": "mock_local",
+      "nivelConfiancaDetalhes": "simulado"
+    },
+    {
+      "nome": "Notebooks 29",
+      "localizacao": "FATEC",
+      "capacidadeAlunos": 30,
+      "computadores": 30,
+      "tipoAmbiente": "laboratorio m?vel",
+      "recursos": {
+        "espelhamentoPor": "Projetor",
+        "lousa": "Lousa branca",
+        "internet": "Cabeada e Wi-Fi",
+        "climatizacao": "Ar-condicionado",
+        "mobiliario": [
+          "Mesas",
+          "Cadeiras"
+        ]
+      },
+      "equipamentos": [
+        {
+          "nome": "Projetor",
+          "quantidade": 1
+        },
+        {
+          "nome": "Notebook",
+          "quantidade": 30
+        },
+        {
+          "nome": "Computador do professor",
+          "quantidade": 1
+        }
+      ],
+      "softwares": [
+        {
+          "nome": "Pacote padrao de laboratorio"
+        }
+      ],
+      "restricoesUso": [
+        "Detalhes mockados para ambiente de desenvolvimento"
+      ],
+      "manutencao": {
+        "status": "operacional",
+        "prioridadePreventiva": "normal",
+        "proximaRevisaoSimulada": "2026-12-31",
+        "observacao": "Informacao gerada a partir do seed local"
+      },
+      "observacoes": [
+        "Dados complementares mockados para popular o ambiente local"
+      ],
+      "fonteDetalhes": "mock_local",
+      "nivelConfiancaDetalhes": "simulado"
+    },
+    {
+      "nome": "Notebooks 30",
+      "localizacao": "FATEC",
+      "capacidadeAlunos": 30,
+      "computadores": 30,
+      "tipoAmbiente": "laboratorio m?vel",
+      "recursos": {
+        "espelhamentoPor": "Projetor",
+        "lousa": "Lousa branca",
+        "internet": "Cabeada e Wi-Fi",
+        "climatizacao": "Ar-condicionado",
+        "mobiliario": [
+          "Mesas",
+          "Cadeiras"
+        ]
+      },
+      "equipamentos": [
+        {
+          "nome": "Projetor",
+          "quantidade": 1
+        },
+        {
+          "nome": "Notebook",
+          "quantidade": 30
+        },
+        {
+          "nome": "Computador do professor",
+          "quantidade": 1
+        }
+      ],
+      "softwares": [
+        {
+          "nome": "Pacote padrao de laboratorio"
+        }
+      ],
+      "restricoesUso": [
+        "Detalhes mockados para ambiente de desenvolvimento"
+      ],
+      "manutencao": {
+        "status": "operacional",
+        "prioridadePreventiva": "normal",
+        "proximaRevisaoSimulada": "2026-12-31",
+        "observacao": "Informacao gerada a partir do seed local"
+      },
+      "observacoes": [
+        "Dados complementares mockados para popular o ambiente local"
+      ],
+      "fonteDetalhes": "mock_local",
+      "nivelConfiancaDetalhes": "simulado"
+    }
+  ]
+}

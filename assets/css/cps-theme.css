@@ -1,0 +1,269 @@
+:root {
+  --cps-red: #b20000;
+  --cps-black: #000000;
+  --cps-white: #ffffff;
+  --cps-gray-60: #666666;
+  --cps-bg: #f5f5f5;
+  --cps-border: #d9d9d9;
+}
+
+body {
+  font-family: Verdana, Geneva, sans-serif !important;
+  color: var(--cps-black);
+}
+
+/* Dashboard stat items */
+.stat-item {
+  background: var(--cps-white);
+  border: 1px solid var(--cps-border);
+  border-left: 4px solid var(--cps-red);
+  border-radius: 6px;
+  padding: 15px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  margin-bottom: 10px;
+}
+.stat-item dl {
+  margin: 0;
+  padding: 0;
+}
+.stat-item dt {
+  font-size: 24px;
+  font-weight: bold;
+  color: var(--cps-red);
+  margin-top: 5px;
+}
+.stat-item dd {
+  font-size: 12px;
+  color: var(--cps-gray-60);
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Button overrides */
+.button, button, input[type="submit"], .btn {
+  background-color: var(--cps-red) !important;
+  color: var(--cps-white) !important;
+  border: none !important;
+  border-radius: 4px;
+}
+.button:hover, button:hover, input[type="submit"]:hover, .btn:hover {
+  opacity: 0.9;
+}
+
+/* Hamburger menu styles */
+.menu-toggle {
+  display: none;
+  background: none !important;
+  color: var(--cps-red) !important;
+  font-size: 24px;
+  cursor: pointer;
+  padding: 5px;
+  border: none;
+}
+
+/* Header responsiveness */
+@media (max-width: 768px) {
+  .header .outer .block-group {
+    display: flex;
+    flex-direction: column;
+  }
+  .header-meta {
+    display: none; /* hidden by default on mobile */
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+  }
+  .header-meta.active {
+    display: flex;
+  }
+  .header-meta .iconbar {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px 0;
+  }
+  .header-meta .iconbar a {
+    display: block;
+    padding: 10px;
+    border-bottom: 1px solid var(--cps-border);
+  }
+  .menu-toggle {
+    display: block;
+    position: absolute;
+    right: 20px;
+    top: 15px;
+  }
+  .header-title {
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  
+  /* Block groups stacking */
+  .block-group {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  .block.b-40, .block.b-60, .block.b-20, .block.b-80,
+  .block.b-50, .block.b-25, .block.b-33, .block.b-75,
+  .stat-item,
+  .box-period .block {
+    width: 100% !important;
+  }
+  .login-fieldset {
+    width: 100% !important;
+    max-width: 400px;
+    margin: 0 auto;
+    box-sizing: border-box;
+  }
+
+  /* Tables to Vertical Cards */
+  .table-responsive-cards, 
+  .table-responsive-cards table, 
+  .table-responsive-cards thead, 
+  .table-responsive-cards tbody, 
+  .table-responsive-cards th, 
+  .table-responsive-cards td, 
+  .table-responsive-cards tr {
+    display: block;
+  }
+  
+  .table-responsive-cards thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+  
+  .table-responsive-cards tr {
+    border: 1px solid var(--cps-border);
+    margin-bottom: 15px;
+    background: var(--cps-white);
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  }
+  
+  .table-responsive-cards td {
+    border: none;
+    position: relative;
+    padding-left: 45% !important;
+    text-align: left;
+    margin-bottom: 5px;
+    min-height: 24px;
+  }
+  
+  .table-responsive-cards td:before {
+    position: absolute;
+    top: 0;
+    left: 10px;
+    width: 40%;
+    padding-right: 10px;
+    white-space: nowrap;
+    font-weight: bold;
+    content: attr(data-label);
+    color: var(--cps-gray-60);
+  }
+}
+
+/* Tab/Settings Responsiveness */
+.tabs, .nav-tabs {
+  display: flex;
+  overflow-x: auto;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+  border-bottom: 1px solid var(--cps-border);
+}
+.tabs li.active a, .nav-tabs li.active a {
+  border-bottom: 3px solid var(--cps-red) !important;
+  color: var(--cps-red) !important;
+  font-weight: bold;
+}
+
+/* Bookings Grid Responsiveness - Horizontal Scroll */
+#bookings_grid {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Sticky column for Bookings Grid */
+@media (max-width: 768px) {
+  .bookings-grid td:first-child,
+  .bookings-grid th:first-child {
+    position: sticky;
+    left: 0;
+    background-color: var(--cps-white);
+    z-index: 2;
+    border-right: 1px solid var(--cps-border);
+  }
+  .bookings-grid thead tr:first-child th {
+    position: sticky;
+    top: 0;
+    z-index: 3;
+    background-color: var(--cps-white);
+  }
+  .bookings-grid thead tr:first-child th:first-child {
+    z-index: 4;
+  }
+}
+
+/* Bottom Navigation */
+.bottom-nav {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--cps-white);
+  border-top: 1px solid var(--cps-border);
+  box-shadow: 0 -2px 10px rgba(0,0,0,0.05);
+  z-index: 1000;
+}
+.bottom-nav .nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  padding: 10px 5px;
+  color: var(--cps-gray-60);
+  text-decoration: none;
+  font-size: 11px;
+}
+.bottom-nav .nav-item img {
+  width: 20px;
+  height: 20px;
+  margin-bottom: 4px;
+  opacity: 0.7;
+}
+.bottom-nav .nav-item:hover, .bottom-nav .nav-item.active {
+  color: var(--cps-red);
+}
+.bottom-nav .nav-item:hover img, .bottom-nav .nav-item.active img {
+  opacity: 1;
+}
+
+@media (max-width: 768px) {
+  .bottom-nav {
+    display: flex;
+  }
+  body {
+    padding-bottom: 60px; /* Make room for bottom nav */
+  }
+}
+
+/* Alpine & HTMX utilities */
+[x-cloak] { display: none !important; }
+.htmx-indicator {
+    opacity: 0;
+    transition: opacity 200ms ease-in;
+}
+.htmx-request .htmx-indicator {
+    opacity: 1;
+}
+.htmx-request.htmx-indicator {
+    opacity: 1;
+}

@@ -1,0 +1,27 @@
+{
+  "name": "reserva-laboratorios-fatec",
+  "version": "1.0.0",
+  "description": "Sistema de reserva de laboratórios FATEC adaptado do ClassroomBookings.",
+  "main": "index.js",
+  "scripts": {
+    "dev:css": "npx tailwindcss -i ./assets/css/src/main.css -o ./assets/css/dist/style.css --watch",
+    "build:css": "npx tailwindcss -i ./assets/css/src/main.css -o ./assets/css/dist/style.css --minify",
+    "test": "npm run test:php",
+    "test:php": "php tests/RoomOccupancySummaryTest.php"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wellingtonspdev/Reserva_de_Laboratorios_FATEC.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "AGPL-3.0-or-later",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/wellingtonspdev/Reserva_de_Laboratorios_FATEC/issues"
+  },
+  "homepage": "https://github.com/wellingtonspdev/Reserva_de_Laboratorios_FATEC#readme",
+  "devDependencies": {
+    "tailwindcss": "^3.4.19"
+  }
+}

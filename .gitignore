@@ -1,0 +1,63 @@
+# Dependencies
+node_modules/
+
+# Local environment
+.env
+.env.*
+!.env.example
+local/
+.mysql_data/
+.reversa/config.user.toml
+.agents/
+.planning/
+.reversa/
+_reversa_sdd/
+AGENTS.md
+GEMINI.md
+
+# Runtime/generated uploads
+uploads/*
+!uploads/.htaccess
+!uploads/index.html
+
+# Data exports and database dumps
+*.csv
+*.xlsx
+*.xls
+*.dump
+*.bak
+*.backup
+/*.sql
+seed/*.sql
+seed/*.csv
+
+# Local analysis/scratch files
+frontend_audit_v2.md
+fix_settings.sql
+design.md
+RELATORIO_*.md
+Quadro_chaves*.jpeg
+stitch/
+translate.py
+
+# Logs/cache/temp
+*.log
+*.tmp
+*.temp
+.cache/
+tmp/
+temp/
+
+# OS/editor
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+
+# Secrets/certificates
+*.pem
+*.key
+*.pfx
+*.crt
+*.cer
