@@ -11,16 +11,16 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/wellingtonspdev/Reserva_de_Laboratorios_FATEC.git"
+    "url": "git+https://github.com/wellingtonspdev/reserva-laboratorios-fatec.git"
   },
   "keywords": [],
   "author": "",
   "license": "AGPL-3.0-or-later",
   "type": "commonjs",
   "bugs": {
-    "url": "https://github.com/wellingtonspdev/Reserva_de_Laboratorios_FATEC/issues"
+    "url": "https://github.com/wellingtonspdev/reserva-laboratorios-fatec/issues"
   },
-  "homepage": "https://github.com/wellingtonspdev/Reserva_de_Laboratorios_FATEC#readme",
+  "homepage": "https://github.com/wellingtonspdev/reserva-laboratorios-fatec#readme",
   "devDependencies": {
     "tailwindcss": "^3.4.19"
   }
