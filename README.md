@@ -128,13 +128,15 @@ Pontos obrigatórios para o operador:
 - validar logs e rotas principais após o deploy;
 - não habilitar seed em produção real sem necessidade controlada.
 
-## Cuidados Antes de Tornar Público
+## Cuidados de Publicação
 
-Antes de mudar a visibilidade do repositório:
+Este repositório público foi criado a partir de um snapshot sanitizado, sem reaproveitar o histórico do repositório interno.
+
+Antes de republicar, espelhar ou criar novas branches públicas:
 
 1. Confirme que não há CSVs, dumps SQL, `.env`, chaves ou certificados versionados.
-2. Confirme que branches antigas com dados reais foram removidas ou que o repositório público foi recriado a partir de snapshot limpo.
-3. Confirme que `main` e `develop` apontam para a versão sanitizada.
+2. Confirme que a branch pública contém apenas histórico sanitizado.
+3. Não envie branches antigas do repositório interno para este repositório público.
 
 Checklist detalhado: [docs/LIMPEZA_BRANCHES_PUBLICACAO.md](docs/LIMPEZA_BRANCHES_PUBLICACAO.md).
 
