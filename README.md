@@ -128,17 +128,16 @@ Pontos obrigatórios para o operador:
 - validar logs e rotas principais após o deploy;
 - não habilitar seed em produção real sem necessidade controlada.
 
-## Cuidados de Publicação
+## Cuidados Para Uso Público
 
 Este repositório público foi criado a partir de um snapshot sanitizado, sem reaproveitar o histórico do repositório interno.
 
-Antes de republicar, espelhar ou criar novas branches públicas:
+Ao usar, publicar forks ou preparar deploys:
 
 1. Confirme que não há CSVs, dumps SQL, `.env`, chaves ou certificados versionados.
-2. Confirme que a branch pública contém apenas histórico sanitizado.
-3. Não envie branches antigas do repositório interno para este repositório público.
-
-Checklist detalhado: [docs/LIMPEZA_BRANCHES_PUBLICACAO.md](docs/LIMPEZA_BRANCHES_PUBLICACAO.md).
+2. Use dados reais apenas em ambiente privado e controlado.
+3. Mantenha `INCLUDE_SEED=0` em produção, salvo em migração planejada.
+4. Configure credenciais, domínio, backups e monitoramento fora do repositório.
 
 ## Licença
 
