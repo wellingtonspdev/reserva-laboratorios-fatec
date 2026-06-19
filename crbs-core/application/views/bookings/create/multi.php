@@ -40,7 +40,7 @@ $items[] = [
 echo iconbar($items, current_url().'?'.http_build_query(array_merge($params, ['booking_type' => $booking_type])));
 
 
-echo "<br>";
+echo "<div class='cps-multibooking-spacer' aria-hidden='true'></div>";
 
 //
 
@@ -53,7 +53,7 @@ echo validation_errors();
 //
 $attrs = [
 	'id' => 'bookings_create_multi',
-	'class' => 'cssform',
+	'class' => 'cssform cps-multibooking-form',
 	'up-accept-location' => 'bookings',
 	'up-layer' => 'any',
 	'up-target' => '.bookings-create',

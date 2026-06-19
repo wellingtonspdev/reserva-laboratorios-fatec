@@ -43,13 +43,13 @@ if ( ! $show_room_col || ! $show_date_col) {
 		$info_html .= sprintf($info_fmt, $label, $value);
 	}
 
-	echo "<div class='bg-white px-4 py-5 sm:px-6 mb-6 rounded-lg shadow-sm ring-1 ring-gray-200'><dl class='grid grid-cols-1 gap-x-4 gap-y-6 sm:grid-cols-2'>{$info_html}</dl></div>";
+	echo "<div class='cps-multibooking-summary'><dl>{$info_html}</dl></div>";
 }
 
 
 // Generate rows
 if (is_array($multibooking->slots)) {
-    echo "<div class='flex flex-col gap-4 mb-6'>";
+    echo "<div class='cps-multibooking-list'>";
 	foreach ($multibooking->slots as $key => $slot) {
 
 		$capabilities = $slot->capabilities;
@@ -62,7 +62,7 @@ if (is_array($multibooking->slots)) {
 			'name' => $create_field,
 			'value' => 1,
 			'checked' => (set_value($create_field, 1) == 1),
-            'class' => 'h-5 w-5 rounded border-gray-300 text-blue-600 focus:ring-blue-600 cursor-pointer'
+            'class' => 'cps-multibooking-check'
 		];
 		if (!$capabilities['single.create']) {
 			$check_props['disabled'] = '';
@@ -71,7 +71,7 @@ if (is_array($multibooking->slots)) {
 			$allowed_booking_count++;
 		}
 		$create_check = form_checkbox($check_props);
-		$check_col = "<div class='flex items-center h-6 mr-3 mt-1'>" . $create_hidden . $create_check . "</div>";
+		$check_col = "<div class='cps-multibooking-check-wrap'>" . $create_hidden . $create_check . "</div>";
 
 		// Date column
 		if ($show_date_col) {
@@ -103,20 +103,20 @@ if (is_array($multibooking->slots)) {
 				'id' => $department_field,
 				'options' => html_escape($department_options),
 				'selected' => $value,
-				'class' => 'cps-form-control block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-blue-600 sm:text-sm sm:leading-6',
+				'class' => 'cps-multibooking-control',
 				'up-copy-group' => 'department_id',
 			]);
 			$append_block = '';
 			if ($is_first_department) {
-				$append_block = "<button type='button' class='ml-2 inline-flex items-center rounded bg-gray-50 px-2.5 py-1.5 text-sm font-semibold text-gray-700 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-100 transition' up-copy-to='department_id' title='Copiar para todos'>&darr;</button>";
+				$append_block = "<button type='button' class='cps-multibooking-copy' up-copy-to='department_id' title='Copiar para todos'>&darr;</button>";
 			}
-			$department_col = "<div class='flex items-center mb-3'><div class='w-24 md:w-32 text-sm text-gray-500 font-medium'>" . lang('department.department') . "</div><div class='flex-1 flex'>{$input}{$append_block}</div></div>";
+			$department_col = "<div class='cps-multibooking-field'><div class='cps-multibooking-label'>" . lang('department.department') . "</div><div class='cps-multibooking-input-group'>{$input}{$append_block}</div></div>";
 		} else {
 			$department_label = sprintf('(%s)', lang('app.none'));
 			if (isset($department) && ! empty($department)) {
 				$department_label = html_escape($department->name);
 			}
-			$department_col = "<div class='flex items-center mb-3'><div class='w-24 md:w-32 text-sm text-gray-500 font-medium'>" . lang('department.department') . "</div><div class='flex-1 text-sm text-gray-900 font-medium'>{$department_label}</div></div>";
+			$department_col = "<div class='cps-multibooking-field'><div class='cps-multibooking-label'>" . lang('department.department') . "</div><div class='cps-multibooking-static'>{$department_label}</div></div>";
 		}
 
 		// User column
@@ -128,21 +128,21 @@ if (is_array($multibooking->slots)) {
 				'id' => $user_field,
 				'options' => $user_options,
 				'selected' => $value,
-				'class' => 'cps-form-control block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-blue-600 sm:text-sm sm:leading-6',
+				'class' => 'cps-multibooking-control',
 				'up-copy-group' => 'user_id',
 			]);
 			$append_block = '';
 			if ($is_first_user) {
-				$append_block = "<button type='button' class='ml-2 inline-flex items-center rounded bg-gray-50 px-2.5 py-1.5 text-sm font-semibold text-gray-700 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-100 transition' up-copy-to='user_id' title='Copiar para todos'>&darr;</button>";
+				$append_block = "<button type='button' class='cps-multibooking-copy' up-copy-to='user_id' title='Copiar para todos'>&darr;</button>";
 			}
-			$user_col = "<div class='flex items-center mb-3'><div class='w-24 md:w-32 text-sm text-gray-500 font-medium'>" . lang('user.user') . "</div><div class='flex-1 flex'>{$input}{$append_block}</div></div>";
+			$user_col = "<div class='cps-multibooking-field'><div class='cps-multibooking-label'>" . lang('user.user') . "</div><div class='cps-multibooking-input-group'>{$input}{$append_block}</div></div>";
 		} else {
 			$user_label = sprintf('(%s)', lang('app.none'));
 			if (isset($user) && ! empty($user)) {
 				$user_label = !empty($user->displayname) ? $user->displayname : $user->username;
 				$user_label = html_escape($user_label);
 			}
-			$user_col = "<div class='flex items-center mb-3'><div class='w-24 md:w-32 text-sm text-gray-500 font-medium'>" . lang('user.user') . "</div><div class='flex-1 text-sm text-gray-900 font-medium'>{$user_label}</div></div>";
+			$user_col = "<div class='cps-multibooking-field'><div class='cps-multibooking-label'>" . lang('user.user') . "</div><div class='cps-multibooking-static'>{$user_label}</div></div>";
 		}
 
 		// Notes
@@ -154,32 +154,32 @@ if (is_array($multibooking->slots)) {
 				'id' => $notes_field,
 				'placeholder' => lang('booking.notes'),
 				'value' => $value,
-				'class' => 'cps-form-control block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-blue-600 sm:text-sm sm:leading-6',
+				'class' => 'cps-multibooking-control',
 				'up-copy-group' => 'notes',
 			]);
 			$append_block = '';
 			if ($is_first) {
-				$append_block = "<button type='button' class='ml-2 inline-flex items-center rounded bg-gray-50 px-2.5 py-1.5 text-sm font-semibold text-gray-700 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-100 transition' up-copy-to='notes' title='Copiar para todos'>&darr;</button>";
+				$append_block = "<button type='button' class='cps-multibooking-copy' up-copy-to='notes' title='Copiar para todos'>&darr;</button>";
 			}
-			$notes_col = "<div class='flex items-center'><div class='w-24 md:w-32 text-sm text-gray-500 font-medium'>" . lang('booking.notes') . "</div><div class='flex-1 flex'>{$input}{$append_block}</div></div>";
+			$notes_col = "<div class='cps-multibooking-field'><div class='cps-multibooking-label'>" . lang('booking.notes') . "</div><div class='cps-multibooking-input-group'>{$input}{$append_block}</div></div>";
 		} else {
 			$notes_col = msgbox('notice is-solo large', lang('booking.error.no_permission_room_date'));
 		}
 
         // Wrap the row (Card)
-        echo "<div class='bg-white shadow-sm ring-1 ring-gray-200 sm:rounded-lg p-5 flex flex-col md:flex-row gap-6 md:items-start transition-colors hover:bg-gray-50'>";
+        echo "<div class='cps-multibooking-row'>";
         
-        echo "<div class='flex flex-row md:flex-col md:w-1/3 min-w-[200px]'>";
-        echo "<div class='flex items-start'>";
+        echo "<div class='cps-multibooking-slot'>";
+        echo "<div class='cps-multibooking-slot-inner'>";
         echo $check_col;
-        echo "<div class='flex-1'>";
+        echo "<div class='cps-multibooking-slot-text'>";
         echo $date_col;
         echo $room_col;
         echo "</div>";
         echo "</div>"; 
         echo "</div>"; 
 
-        echo "<div class='flex flex-col md:w-2/3 flex-1 border-t md:border-t-0 md:border-l border-gray-100 pt-4 md:pt-0 md:pl-6'>";
+        echo "<div class='cps-multibooking-fields'>";
         echo $department_col;
         echo $user_col;
         echo $notes_col;
@@ -226,5 +226,5 @@ if ($can_book_single) {
 
 	$cancel = anchor($return_uri, lang('app.action.cancel'), ['class' => 'cps-btn cps-btn-secondary', 'up-dismiss' => '']);
 
-	echo "<div class='flex flex-col sm:flex-row gap-3 pt-6 border-t border-gray-200'>{$submit}{$cancel}</div>";
+	echo "<div class='cps-multibooking-actions'>{$submit}{$cancel}</div>";
 }

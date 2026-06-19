@@ -7,7 +7,7 @@
 	]);
 	?>
 	<div class="cps-admin-filter-grid">
-		<div class="cps-admin-field">
+		<div class="cps-admin-field cps-admin-filter-search">
 			<?php
 			echo form_label(lang('app.search'), 'q');
 			echo form_input([
@@ -39,9 +39,9 @@
 			]);
 			?>
 		</div>
-		<div class="cps-admin-field">
+		<div class="cps-admin-field cps-admin-filter-actions">
 			<label aria-hidden="true">&nbsp;</label>
-			<div class="flex flex-wrap gap-2">
+			<div class="cps-admin-filter-buttons">
 				<?php
 				echo form_button([
 					'type' => 'submit',

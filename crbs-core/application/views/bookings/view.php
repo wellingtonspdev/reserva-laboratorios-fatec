@@ -177,11 +177,11 @@ if (!empty($booking->notes)) {
 
 }
 
-$info_html = "<dl class='w-full bg-cps-white border border-cps-gray-border rounded-card p-4 shadow-sm mb-6'>";
+$info_html = "<dl class='cps-booking-detail-list w-full bg-cps-white border border-cps-gray-border rounded-card p-4 shadow-sm mb-6'>";
 foreach ($info as $row) {
-	$info_html .= "<div class='py-3 border-b border-cps-gray-border flex flex-col md:flex-row last:border-0'>";
-	$info_html .= "<dt class='font-bold text-cps-black md:w-1/3 mb-1 md:mb-0'>{$row['label']}</dt>";
-	$info_html .= "<dd class='text-cps-gray-text md:w-2/3 m-0'>{$row['value']}</dd>";
+	$info_html .= "<div class='cps-booking-detail-row py-3 border-b border-cps-gray-border flex flex-col md:flex-row last:border-0'>";
+	$info_html .= "<dt class='cps-booking-detail-label font-bold text-cps-black md:w-1/3 mb-1 md:mb-0'>{$row['label']}</dt>";
+	$info_html .= "<dd class='cps-booking-detail-value text-cps-gray-text md:w-2/3 m-0'>{$row['value']}</dd>";
 	$info_html .= "</div>";
 }
 $info_html .= "</dl>";
@@ -195,7 +195,7 @@ echo "<div class='messages'>{$messages}</div>";
 // Booking
 //
 
-echo "<h3>" . lang('booking.booking') . "</h3>";
+echo "<h3 class='cps-booking-view-heading'>" . lang('booking.booking') . "</h3>";
 echo $links_html;
 echo "<div class='bookings-edit-choice'></div>";
 echo "<div class='bookings-cancel'></div>";
@@ -204,7 +204,7 @@ echo $info_html;
 // Room
 //
 
-echo '<h3>' . html_escape($booking->room->name) . '</h3>';
+echo '<h3 class="cps-booking-view-heading">' . html_escape($booking->room->name) . '</h3>';
 
 $photo_html = '';
 $fields_html = '';
@@ -220,11 +220,11 @@ $render_room_info_value = function ($row) {
 	return nl2br(html_escape($row['value']));
 };
 
-$fields_html = "<dl class='w-full bg-cps-white border border-cps-gray-border rounded-card p-4 shadow-sm mb-6'>";
+$fields_html = "<dl class='cps-booking-detail-list w-full bg-cps-white border border-cps-gray-border rounded-card p-4 shadow-sm mb-6'>";
 foreach ($booking->room->info as $row) {
-	$fields_html .= "<div class='py-3 border-b border-cps-gray-border flex flex-col md:flex-row last:border-0'>";
-	$fields_html .= "<dt class='font-bold text-cps-black md:w-1/3 mb-1 md:mb-0'>" . html_escape($row['label']) . "</dt>";
-	$fields_html .= "<dd class='text-cps-gray-text md:w-2/3 m-0'>" . $render_room_info_value($row) . "</dd>";
+	$fields_html .= "<div class='cps-booking-detail-row py-3 border-b border-cps-gray-border flex flex-col md:flex-row last:border-0'>";
+	$fields_html .= "<dt class='cps-booking-detail-label font-bold text-cps-black md:w-1/3 mb-1 md:mb-0'>" . html_escape($row['label']) . "</dt>";
+	$fields_html .= "<dd class='cps-booking-detail-value text-cps-gray-text md:w-2/3 m-0'>" . $render_room_info_value($row) . "</dd>";
 	$fields_html .= "</div>";
 }
 $fields_html .= "</dl>";

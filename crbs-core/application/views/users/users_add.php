@@ -13,7 +13,7 @@ echo form_open(current_url(), array('class' => 'cssform cps-admin-form', 'id' =>
 
 ?>
 
-<fieldset>
+<fieldset class="cps-users-account-section">
 
 	<legend accesskey="U" tabindex="<?php echo tab_index() ?>"><?= lang('user.user_details') ?></legend>
 
@@ -53,23 +53,6 @@ echo form_open(current_url(), array('class' => 'cssform cps-admin-form', 'id' =>
 	<?php echo form_error($field); ?>
 
 	<p>
-		<label for="enabled"><?= lang('user.field.enabled') ?></label>
-		<?php
-		$field = 'enabled';
-		$value = isset($user) ? $user->enabled : '1';
-		$checked = set_checkbox($field, '1', $value == '1');
-		echo form_hidden($field, '0');
-		echo form_checkbox(array(
-			'name' => $field,
-			'id' => $field,
-			'value' => '1',
-			'tabindex' => tab_index(),
-			'checked' => $checked,
-		));
-		?>
-	</p>
-
-	<p>
 		<label for="email"><?= lang('user.field.email') ?></label>
 		<?php
 		$field = 'email';
@@ -86,10 +69,31 @@ echo form_open(current_url(), array('class' => 'cssform cps-admin-form', 'id' =>
 	</p>
 	<?php echo form_error($field); ?>
 
+	<p class="cps-checkbox-field">
+		<?php
+		$field = 'enabled';
+		$value = isset($user) ? $user->enabled : '1';
+		$checked = set_checkbox($field, '1', $value == '1');
+		echo form_hidden($field, '0');
+		?>
+		<label for="enabled">
+			<?php
+			echo form_checkbox(array(
+			'name' => $field,
+			'id' => $field,
+			'value' => '1',
+			'tabindex' => tab_index(),
+			'checked' => $checked,
+		));
+		?>
+			<span><?= lang('user.field.enabled') ?></span>
+		</label>
+	</p>
+
 </fieldset>
 
 
-<fieldset>
+<fieldset class="cps-users-constraints-section">
 
 	<legend accesskey="C" tabindex="<?php echo tab_index() ?>"><?= lang('constraint.constraints') ?></legend>
 
@@ -168,7 +172,7 @@ echo form_open(current_url(), array('class' => 'cssform cps-admin-form', 'id' =>
 </fieldset>
 
 
-<fieldset>
+<fieldset class="cps-users-password-section">
 
 	<legend accesskey="P" tabindex="<?php echo tab_index() ?>"><?= lang('user.field.password') ?></legend>
 
@@ -190,7 +194,7 @@ echo form_open(current_url(), array('class' => 'cssform cps-admin-form', 'id' =>
 		));
 		?>
 	</p>
-	<p class="hint"><?= lang('user.field.password.hint') ?></p>
+	<p class="hint cps-password-hint"><?= lang('user.field.password.hint') ?></p>
 	<?php echo form_error($field); ?>
 
 	<p>
@@ -208,27 +212,31 @@ echo form_open(current_url(), array('class' => 'cssform cps-admin-form', 'id' =>
 	</p>
 	<?php echo form_error($field); ?>
 
-	<p>
-		<label for="force_password_reset"><?= lang('user.field.force_password_reset') ?></label>
+	<p class="cps-checkbox-field">
 		<?php
 		$field = 'force_password_reset';
 		$value = isset($user) ? $user->force_password_reset : '1';
 		$checked = set_checkbox($field, '1', $value == '1');
 		echo form_hidden($field, '0');
-		echo form_checkbox(array(
-			'name' => $field,
-			'id' => $field,
-			'value' => '1',
-			'tabindex' => tab_index(),
-			'checked' => $checked,
-		));
 		?>
+		<label for="force_password_reset">
+			<?php
+			echo form_checkbox(array(
+				'name' => $field,
+				'id' => $field,
+				'value' => '1',
+				'tabindex' => tab_index(),
+				'checked' => $checked,
+			));
+			?>
+			<span><?= lang('user.field.force_password_reset') ?></span>
+		</label>
 	</p>
 
 </fieldset>
 
 
-<fieldset>
+<fieldset class="cps-users-personal-section">
 
 	<legend accesskey="P" tabindex="<?php echo tab_index() ?>"><?= lang('user.personal_details') ?></legend>
 

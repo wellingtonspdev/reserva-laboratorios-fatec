@@ -7,7 +7,6 @@
 			'tabindex' => $submit[1],
 		]);
 	}
-	echo "&nbsp;&nbsp;";
 	if (isset($cancel)) {
 		echo anchor($cancel[2], $cancel[0], array('tabindex' => $cancel[1]));
 	}

@@ -145,6 +145,19 @@
     @apply m-0;
   }
 
+  .cps-dashboard-page {
+    @apply mx-auto w-full max-w-5xl;
+  }
+  .cps-dashboard-stats {
+    @apply mb-8 grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3;
+  }
+  .cps-dashboard-stat-card {
+    @apply rounded-card border border-cps-gray-border bg-cps-white p-4 shadow-sm;
+  }
+  .cps-dashboard-sections {
+    @apply grid grid-cols-1 gap-6 lg:grid-cols-2;
+  }
+
   .columns:has(#login.cssform) {
     @apply grid w-full grid-cols-1 gap-5 overflow-hidden rounded-card border border-cps-gray-border bg-cps-white p-4 shadow-sm md:grid-cols-[minmax(0,1fr)_minmax(220px,320px)] md:p-6;
   }
@@ -471,14 +484,14 @@
     @apply mt-5 rounded-card border border-cps-gray-border bg-cps-white p-4 shadow-sm;
   }
   .cps-settings-actions .submit {
-    @apply m-0 flex flex-col-reverse gap-3 border-0 p-0 sm:flex-row sm:items-center sm:justify-end;
+    @apply m-0 grid w-full grid-cols-2 gap-3 border-0 p-0 sm:ml-auto sm:max-w-md;
   }
   .cps-settings-actions .submit input,
   .cps-settings-actions .submit button {
-    @apply min-h-11 rounded-btn border border-cps-red bg-cps-red px-4 py-2 text-sm font-bold text-cps-white hover:opacity-90;
+    @apply min-h-11 w-full rounded-btn border border-cps-red bg-cps-red px-4 py-2 text-sm font-bold text-cps-white hover:opacity-90;
   }
   .cps-settings-actions .submit a {
-    @apply inline-flex min-h-11 items-center justify-center rounded-btn border border-cps-gray-border bg-cps-white px-4 py-2 text-sm font-bold text-cps-gray-text no-underline hover:border-cps-red hover:text-cps-red;
+    @apply order-first inline-flex min-h-11 w-full items-center justify-center rounded-btn border border-cps-gray-border bg-cps-white px-4 py-2 text-sm font-bold text-cps-gray-text no-underline hover:border-cps-red hover:text-cps-red;
   }
 
   .cps-admin-page {
@@ -506,13 +519,26 @@
     @apply mb-4 rounded-card border border-cps-gray-border bg-cps-white p-4 shadow-sm md:p-5;
   }
   .cps-admin-filter-grid {
-    @apply grid grid-cols-1 gap-3 md:grid-cols-4 md:gap-4;
+    @apply grid grid-cols-1 gap-3 md:items-end md:gap-4;
+  }
+  @media (min-width: 768px) {
+    .cps-admin-filter-grid {
+      grid-template-columns: minmax(220px, 1.45fr) minmax(160px, 1fr) minmax(180px, 1fr) auto;
+    }
+  }
+  #users_filter .cps-admin-filter-grid {
+    @apply items-end gap-3 lg:gap-4;
+  }
+  @media (min-width: 768px) {
+    #users_filter .cps-admin-filter-grid {
+      grid-template-columns: minmax(240px, 1.35fr) minmax(180px, 0.9fr) minmax(200px, 1fr) minmax(210px, auto);
+    }
   }
   .cps-admin-field {
     @apply space-y-1;
   }
   .cps-admin-field label {
-    @apply block text-sm font-bold text-cps-gray-text;
+    @apply block min-h-5 text-sm font-bold leading-5 text-cps-gray-text;
   }
   .cps-admin-field input,
   .cps-admin-field select,
@@ -526,7 +552,23 @@
   #role_add textarea,
   #department_add input[type=text],
   #department_add textarea {
-    @apply w-full max-w-full rounded-btn border border-cps-gray-border bg-cps-white px-3 py-2 text-sm outline-none transition-shadow focus:border-cps-red focus:ring-2 focus:ring-red-100;
+    @apply min-h-11 w-full max-w-full rounded-btn border border-cps-gray-border bg-cps-white px-3 py-2 text-sm outline-none transition-shadow focus:border-cps-red focus:ring-2 focus:ring-red-100;
+  }
+  .cps-admin-filter-actions {
+    @apply space-y-1;
+  }
+  .cps-admin-filter-actions > label {
+    visibility: hidden;
+  }
+  .cps-admin-filter-buttons {
+    @apply grid grid-cols-2 gap-2;
+  }
+  .cps-admin-filter-buttons .cps-admin-btn {
+    @apply min-h-11 w-full whitespace-nowrap px-3;
+  }
+  #users_filter .cps-admin-field input,
+  #users_filter .cps-admin-field select {
+    @apply h-11;
   }
   .cps-admin-table-wrap {
     @apply overflow-x-auto rounded-card border border-cps-gray-border bg-cps-white shadow-sm;
@@ -544,17 +586,17 @@
     @apply inline-flex items-center gap-2;
   }
   .cps-admin-actions {
-    @apply mt-5 rounded-card border border-cps-gray-border bg-cps-white p-4 shadow-sm;
+    @apply mt-5 flex justify-center rounded-card border border-cps-gray-border bg-cps-white p-4 shadow-sm;
   }
   .cps-admin-actions .submit {
-    @apply m-0 flex flex-col-reverse gap-3 border-0 p-0 sm:flex-row sm:items-center sm:justify-end;
+    @apply mx-auto my-0 flex w-full max-w-md flex-col justify-center gap-3 border-0 p-0 sm:w-auto sm:max-w-none sm:flex-row sm:items-center;
   }
   .cps-admin-actions .submit input,
   .cps-admin-actions .submit button {
-    @apply min-h-11 rounded-btn border border-cps-red bg-cps-red px-4 py-2 text-sm font-bold text-cps-white hover:opacity-90;
+    @apply min-h-11 w-full rounded-btn border border-cps-red bg-cps-red px-4 py-2 text-sm font-bold text-cps-white hover:opacity-90 sm:w-44;
   }
   .cps-admin-actions .submit a {
-    @apply inline-flex min-h-11 items-center justify-center rounded-btn border border-cps-gray-border bg-cps-white px-4 py-2 text-sm font-bold text-cps-gray-text no-underline hover:border-cps-red hover:text-cps-red;
+    @apply order-first inline-flex min-h-11 w-full items-center justify-center rounded-btn border border-cps-gray-border bg-cps-white px-4 py-2 text-sm font-bold text-cps-gray-text no-underline hover:border-cps-red hover:text-cps-red sm:w-44;
   }
   .cps-admin-empty {
     @apply rounded-card border border-dashed border-cps-gray-border bg-cps-white p-6 text-center text-sm text-cps-gray-text;
@@ -579,6 +621,18 @@
   #department_add legend,
   #user_import legend {
     @apply px-2 text-base font-bold text-cps-black;
+  }
+  #user_import legend {
+    @apply ml-4 bg-cps-gray-light px-3;
+  }
+  #user_import fieldset.cssform-stacked {
+    @apply flex min-h-56 flex-col items-center justify-center text-center;
+  }
+  #user_import fieldset.cssform-stacked > p {
+    @apply w-full max-w-md;
+  }
+  #user_import fieldset.cssform-stacked > p > label:first-child {
+    @apply justify-self-center text-center;
   }
   #users_add fieldset > p,
   #role_add fieldset > p,
@@ -611,11 +665,238 @@
   #user_import input[type=radio] {
     @apply accent-cps-red;
   }
+  #users_add .cps-users-account-section {
+    @apply grid gap-4;
+  }
+  #users_add .cps-users-account-section > p {
+    @apply grid grid-cols-1 gap-2;
+    height: auto !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  @media (min-width: 768px) {
+    #users_add .cps-users-account-section > p {
+      grid-template-columns: 180px minmax(0, 1fr);
+      align-items: center;
+      column-gap: 1rem;
+    }
+  }
+  #users_add .cps-users-account-section > p > label:first-child {
+    @apply text-left text-sm font-bold text-cps-gray-text;
+    float: none !important;
+    margin: 0 !important;
+    width: auto !important;
+  }
+  #users_add .cps-users-account-section input[type=text],
+  #users_add .cps-users-account-section select {
+    @apply min-h-11 w-full max-w-xl rounded-btn border border-cps-gray-border bg-cps-white px-3 py-2 text-sm text-cps-black outline-none transition-shadow focus:border-cps-red focus:ring-2 focus:ring-red-100;
+  }
+  #users_add .cps-users-account-section > p.cps-checkbox-field {
+    @apply grid grid-cols-1 gap-2;
+    height: auto !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  @media (min-width: 768px) {
+    #users_add .cps-users-account-section > p.cps-checkbox-field {
+      grid-template-columns: 180px minmax(0, 1fr);
+      align-items: center;
+      column-gap: 1rem;
+    }
+  }
+  #users_add .cps-users-account-section > p.cps-checkbox-field > label {
+    @apply inline-flex w-auto max-w-full cursor-pointer items-center gap-3 text-left text-sm font-bold leading-5 text-cps-gray-text;
+    float: none !important;
+    margin: 0 !important;
+    width: auto !important;
+  }
+  #users_add .cps-users-account-section > p.cps-checkbox-field > label span {
+    background: transparent !important;
+  }
+  @media (min-width: 768px) {
+    #users_add .cps-users-account-section > p.cps-checkbox-field > label {
+      grid-column: 1 / -1;
+    }
+  }
+  #users_add .cps-users-account-section > p.cps-checkbox-field input[type=checkbox] {
+    @apply m-0 h-4 w-4 flex-shrink-0;
+  }
+  #users_add .cps-users-constraints-section > p {
+    @apply block;
+  }
+  #users_add .cps-users-constraints-section > p > label:first-child {
+    @apply mb-3 block;
+  }
+  #users_add .cps-users-constraints-section label.ni {
+    @apply mb-3 flex w-full max-w-3xl;
+  }
+  #users_add .cps-users-password-section {
+    @apply grid gap-4;
+  }
+  #users_add .cps-users-password-section > p {
+    @apply grid grid-cols-1 gap-2;
+    height: auto !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  @media (min-width: 768px) {
+    #users_add .cps-users-password-section > p {
+      grid-template-columns: 180px minmax(0, 1fr);
+      align-items: center;
+      column-gap: 1rem;
+    }
+  }
+  #users_add .cps-users-password-section > p > label:first-child {
+    @apply text-left text-sm font-bold text-cps-gray-text;
+    float: none !important;
+    margin: 0 !important;
+    width: auto !important;
+  }
+  #users_add .cps-users-password-section input[type=password] {
+    @apply min-h-11 w-full max-w-xl rounded-btn border border-cps-gray-border bg-cps-white px-3 py-2 text-sm text-cps-black outline-none transition-shadow focus:border-cps-red focus:ring-2 focus:ring-red-100;
+  }
+  #users_add .cps-users-password-section > .cps-password-hint {
+    @apply -mt-2 max-w-xl text-xs leading-relaxed text-cps-gray-text;
+    display: block !important;
+  }
+  @media (min-width: 768px) {
+    #users_add .cps-users-password-section > .cps-password-hint {
+      margin-left: 196px !important;
+    }
+  }
+  #users_add .cps-users-password-section > p.cps-checkbox-field {
+    @apply grid grid-cols-1;
+    height: auto !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100% !important;
+  }
+  @media (min-width: 768px) {
+    #users_add .cps-users-password-section > p.cps-checkbox-field {
+      grid-template-columns: 180px minmax(0, 1fr);
+      align-items: center;
+      column-gap: 1rem;
+    }
+  }
+  #users_add .cps-users-password-section > p.cps-checkbox-field > label {
+    @apply inline-flex min-h-11 w-auto max-w-full cursor-pointer items-center gap-3 text-left text-sm font-bold leading-5 text-cps-gray-text;
+    float: none !important;
+    margin: 0 !important;
+    min-width: 0 !important;
+    width: auto !important;
+  }
+  #users_add .cps-users-password-section > p.cps-checkbox-field > label span {
+    background: transparent !important;
+  }
+  @media (min-width: 768px) {
+    #users_add .cps-users-password-section > p.cps-checkbox-field > label {
+      grid-column: 2;
+    }
+  }
+  #users_add .cps-users-password-section > p.cps-checkbox-field input[type=checkbox] {
+    @apply m-0 h-4 w-4 flex-shrink-0;
+  }
+  #users_add .cps-users-personal-section {
+    @apply grid gap-4;
+  }
+  #users_add .cps-users-personal-section > p {
+    @apply grid grid-cols-1 gap-2;
+    height: auto !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  @media (min-width: 768px) {
+    #users_add .cps-users-personal-section > p {
+      grid-template-columns: 180px minmax(0, 1fr);
+      align-items: center;
+      column-gap: 1rem;
+    }
+  }
+  #users_add .cps-users-personal-section > p > label:first-child {
+    @apply text-left text-sm font-bold text-cps-gray-text;
+    float: none !important;
+    margin: 0 !important;
+    width: auto !important;
+  }
+  #users_add .cps-users-personal-section input[type=text],
+  #users_add .cps-users-personal-section select {
+    @apply min-h-11 w-full max-w-xl rounded-btn border border-cps-gray-border bg-cps-white px-3 py-2 text-sm text-cps-black outline-none transition-shadow focus:border-cps-red focus:ring-2 focus:ring-red-100;
+  }
+  #user_import fieldset:not(.cssform-stacked) {
+    @apply grid gap-4;
+  }
+  #user_import fieldset:not(.cssform-stacked) > div {
+    @apply max-w-3xl text-sm leading-relaxed text-cps-black;
+  }
+  #user_import fieldset:not(.cssform-stacked) > p {
+    @apply mb-0 grid grid-cols-1 gap-2 md:grid-cols-[180px_minmax(0,1fr)] md:items-center;
+  }
+  #user_import fieldset:not(.cssform-stacked) > p > label:first-child {
+    @apply m-0 w-auto float-none text-left text-sm font-bold text-cps-gray-text;
+  }
+  #user_import fieldset:not(.cssform-stacked) input[type=password],
+  #user_import fieldset:not(.cssform-stacked) select {
+    @apply min-h-11 w-full max-w-xl rounded-btn border border-cps-gray-border bg-cps-white px-3 py-2 text-sm text-cps-black outline-none transition-shadow focus:border-cps-red focus:ring-2 focus:ring-red-100;
+  }
+  #user_import fieldset:not(.cssform-stacked) input[type=checkbox] {
+    @apply h-4 w-4 justify-self-start md:justify-self-start;
+  }
+  #user_import fieldset:not(.cssform-stacked) > p.cps-checkbox-field {
+    @apply block;
+  }
+  #user_import fieldset:not(.cssform-stacked) > p.cps-checkbox-field > label:first-child {
+    @apply inline-flex w-auto max-w-full cursor-pointer items-center gap-3 leading-none;
+  }
+  #user_import fieldset:not(.cssform-stacked) > p.cps-checkbox-field input[type=checkbox] {
+    @apply m-0 h-4 w-4 flex-shrink-0;
+  }
+  #user_import .cps-admin-actions {
+    @apply rounded-card border border-cps-gray-border bg-cps-white p-4 shadow-sm md:p-5;
+  }
+  #user_import .cps-admin-actions .submit {
+    @apply m-0 grid w-full grid-cols-2 gap-3 border-0 p-0 sm:mx-auto sm:max-w-md;
+  }
+  #user_import .cps-admin-actions .submit input,
+  #user_import .cps-admin-actions .submit button,
+  #user_import .cps-admin-actions .submit a {
+    @apply min-h-11 w-full justify-center;
+  }
   .cps-admin-side-panel {
-    @apply rounded-card border border-cps-gray-border bg-cps-white p-4 shadow-sm;
+    @apply self-start rounded-card border border-cps-gray-border bg-cps-white p-4 shadow-sm;
+    align-self: start !important;
+    height: auto !important;
+    min-height: 0 !important;
+  }
+  .cps-admin-side-panel .cps-access-checker-form {
+    @apply w-full max-w-full;
+  }
+  .cps-admin-side-panel .cps-access-checker-form fieldset {
+    @apply m-0 grid gap-4 rounded-card border border-cps-gray-border bg-cps-gray-light p-4;
+  }
+  .cps-admin-side-panel .cps-access-checker-form legend {
+    @apply px-2 text-base font-bold text-cps-black;
+  }
+  .cps-admin-side-panel .cps-access-checker-field {
+    @apply m-0 grid max-w-sm grid-cols-1 gap-2 p-0;
+    height: auto !important;
+  }
+  .cps-admin-side-panel .cps-access-checker-field > label:first-child {
+    @apply float-none m-0 w-auto text-center text-sm font-bold text-cps-gray-text;
+  }
+  .cps-admin-side-panel .cps-access-checker-field select {
+    @apply h-11 w-full max-w-full rounded-btn border border-cps-gray-border bg-cps-white px-3 py-2 text-sm text-cps-black outline-none transition-shadow focus:border-cps-red focus:ring-2 focus:ring-red-100;
+  }
+  .cps-admin-side-panel .cps-access-checker-submit {
+    @apply inline-flex min-h-11 w-full cursor-pointer items-center justify-center rounded-btn border border-cps-red bg-cps-red px-4 py-2 text-sm font-bold text-cps-white hover:bg-red-800;
+  }
+  .cps-admin-side-panel .cps-access-checker-result {
+    @apply min-h-10 rounded-btn border border-cps-gray-border bg-cps-white p-3 text-sm text-cps-black;
+  }
+  .cps-admin-side-panel .cps-access-checker-result:empty {
+    @apply hidden;
   }
   .cps-admin-layout {
-    @apply grid grid-cols-1 gap-4 lg:grid-cols-[minmax(0,1fr)_320px];
+    @apply grid grid-cols-1 items-start gap-4 lg:grid-cols-[minmax(0,1fr)_320px];
   }
   .cps-admin-help {
     @apply mt-2 space-y-2 text-xs leading-relaxed text-cps-gray-text;
@@ -628,6 +909,23 @@
   }
   .cps-admin-field > label:first-child {
     @apply w-auto float-none text-sm font-bold leading-6 text-cps-gray-text;
+  }
+  #users_filter .cps-admin-field {
+    @apply mb-0 flex min-w-0 flex-col gap-1;
+  }
+  #users_filter .cps-admin-field > label:first-child {
+    @apply block min-h-5 w-auto text-sm font-bold leading-5 text-cps-gray-text;
+  }
+  #users_filter .cps-admin-field input,
+  #users_filter .cps-admin-field select {
+    @apply h-11 min-w-0 w-full max-w-full rounded-btn border border-cps-gray-border bg-cps-white px-3 py-2 text-sm text-cps-black outline-none transition-shadow focus:border-cps-red focus:ring-2 focus:ring-red-100;
+  }
+  #users_filter .cps-admin-filter-actions > label:first-child {
+    @apply hidden md:block;
+    visibility: hidden;
+  }
+  #users_filter .cps-admin-filter-buttons {
+    @apply grid grid-cols-2 gap-2;
   }
   .cps-admin-field-control {
     @apply min-w-0;
@@ -878,6 +1176,9 @@
     }
     .cps-admin-filter-grid {
       @apply gap-2;
+    }
+    .cps-admin-filter-actions > label {
+      display: none;
     }
     .cps-admin-field {
       @apply space-y-0.5;
@@ -1689,23 +1990,54 @@
     font-size: 0.7rem !important;
   }
 
+  .cps-multi-select-controller {
+    @apply flex flex-col items-stretch justify-end gap-2 rounded-card border border-cps-gray-border bg-cps-white p-3 shadow-sm sm:flex-row sm:items-center;
+  }
+  .cps-multi-select-toggle,
+  .cps-multi-select-action {
+    @apply inline-flex min-h-11 w-full items-center justify-center gap-2 rounded-btn border px-4 py-2 text-sm font-bold transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red-100 sm:w-auto;
+  }
+  .cps-multi-select-toggle {
+    @apply border-cps-red bg-cps-white text-cps-red hover:bg-red-50;
+  }
+  #bookings_grid[data-multi-select="true"] .cps-multi-select-toggle {
+    @apply border-cps-red bg-cps-red text-cps-white shadow-sm hover:bg-cps-red hover:text-cps-white;
+  }
+  .cps-multi-select-state {
+    @apply inline-flex items-center gap-2 whitespace-nowrap;
+  }
+  .cps-multi-select-action-create {
+    @apply border-green-700 bg-green-700 text-white hover:bg-green-800;
+  }
+  .cps-multi-select-action-cancel {
+    @apply border-red-700 bg-red-700 text-white hover:bg-red-800;
+  }
+
   /* Booking modal surfaces */
   up-modal:has(.bookings-create) up-modal-box,
   up-modal:has(.bookings-edit) up-modal-box,
   up-modal:has(.bookings-view) up-modal-box,
-  up-modal:has(.bookings-card) up-modal-box {
+  up-modal:has(.bookings-card) up-modal-box,
+  up-modal:has(.bookings-cancel-multi) up-modal-box {
     width: min(92vw, 760px);
     max-height: min(88vh, 920px);
     overflow-y: auto;
     padding: 1.25rem;
   }
+  up-modal:has(.bookings-create) up-modal-box {
+    width: min(96vw, 920px);
+  }
   up-modal:has(.bookings-view) up-modal-box {
     width: min(94vw, 840px);
+  }
+  up-modal:has(.bookings-cancel-multi) up-modal-box {
+    width: min(96vw, 920px);
   }
   .bookings-create,
   .bookings-edit,
   .bookings-view,
-  .bookings-card {
+  .bookings-card,
+  .bookings-cancel-multi {
     min-width: 0;
   }
   .bookings-modal-title {
@@ -1736,25 +2068,341 @@
   .bookings-card dl {
     max-width: 100%;
   }
+  .bookings-view {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+  .bookings-view .messages,
+  .bookings-view .bookings-edit-choice,
+  .bookings-view .bookings-cancel {
+    max-width: 100%;
+  }
+  .bookings-view .iconbar {
+    max-width: 100%;
+  }
+  .bookings-view .iconbar > a {
+    min-width: 0;
+    max-width: 100%;
+  }
+  .cps-booking-view-heading {
+    @apply mb-3 mt-0 text-lg font-bold text-cps-black;
+  }
+  .cps-booking-detail-list {
+    min-width: 0;
+    max-width: 100%;
+    overflow: hidden;
+  }
+  .cps-booking-detail-row,
+  .cps-booking-detail-label,
+  .cps-booking-detail-value {
+    min-width: 0;
+    max-width: 100%;
+    overflow-wrap: anywhere;
+  }
+  .cps-booking-detail-value img,
+  .bookings-view .room-photo img {
+    max-width: 100%;
+    height: auto;
+  }
+  .bookings-cancel-multi .cssform {
+    max-width: 100%;
+  }
+  .cps-cancel-multi-table {
+    table-layout: fixed;
+  }
+  .cps-cancel-multi-table th,
+  .cps-cancel-multi-table td {
+    overflow-wrap: anywhere;
+    vertical-align: middle;
+  }
+  .cps-cancel-multi-table label.ni {
+    display: inline;
+    float: none;
+    width: auto;
+    margin: 0;
+    overflow-wrap: anywhere;
+  }
+  .cps-cancel-multi-actions {
+    @apply flex flex-col gap-3 border-t-0 pt-0 sm:flex-row sm:items-center;
+  }
+  .cps-cancel-multi-actions .cps-btn,
+  .cps-cancel-multi-actions .cps-btn-secondary {
+    @apply inline-flex min-h-11 w-full items-center justify-center sm:w-auto;
+  }
+  .cps-multibooking-spacer {
+    @apply h-3;
+  }
+  .cps-multibooking-form {
+    @apply space-y-4;
+  }
+  .cps-multibooking-summary {
+    @apply mb-4 rounded-card border border-cps-gray-border bg-cps-white p-4 shadow-sm;
+  }
+  .cps-multibooking-summary dl {
+    @apply grid grid-cols-1 gap-4 sm:grid-cols-2;
+  }
+  .cps-multibooking-list {
+    @apply mb-5 flex flex-col gap-3;
+  }
+  .cps-multibooking-row {
+    @apply grid min-w-0 gap-4 rounded-card border border-cps-gray-border bg-cps-white p-4 shadow-sm transition-colors hover:bg-cps-gray-light;
+    grid-template-columns: minmax(180px, 0.75fr) minmax(0, 1.35fr);
+    overflow: hidden;
+  }
+  .cps-multibooking-slot {
+    @apply min-w-0;
+  }
+  .cps-multibooking-slot-inner {
+    @apply flex min-w-0 max-w-full items-start gap-3;
+  }
+  .cps-multibooking-check-wrap {
+    @apply flex h-11 w-6 flex-shrink-0 items-center justify-center;
+  }
+  .cps-multibooking-check {
+    @apply h-5 w-5 cursor-pointer rounded border-cps-gray-border text-cps-red focus:ring-cps-red;
+  }
+  .cps-multibooking-slot-text {
+    @apply min-w-0 flex-1;
+  }
+  .cps-multibooking-slot-text label {
+    display: block !important;
+    float: none !important;
+    width: auto !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    overflow-wrap: anywhere;
+  }
+  .cps-multibooking-slot-text label > div {
+    min-width: 0;
+    max-width: 100%;
+    overflow-wrap: anywhere;
+  }
+  .cps-multibooking-fields {
+    @apply min-w-0 space-y-3 border-l border-cps-gray-border pl-4;
+  }
+  .cps-multibooking-field {
+    @apply grid min-w-0 gap-2;
+    grid-template-columns: minmax(110px, 0.35fr) minmax(0, 1fr);
+  }
+  .cps-multibooking-label {
+    @apply pt-2 text-sm font-bold text-cps-gray-text;
+  }
+  .cps-multibooking-input-group {
+    @apply flex min-w-0 items-stretch gap-2;
+  }
+  .cps-multibooking-control {
+    @apply min-h-11 min-w-0 flex-1 rounded-btn border border-cps-gray-border bg-cps-white px-3 py-2 text-sm text-cps-black outline-none transition-shadow focus:border-cps-red focus:ring-2 focus:ring-red-100;
+  }
+  .cps-multibooking-copy {
+    @apply inline-flex min-h-11 w-11 flex-shrink-0 items-center justify-center rounded-btn border border-cps-gray-border bg-cps-white text-sm font-bold text-cps-gray-text shadow-sm transition-colors hover:border-cps-red hover:text-cps-red;
+  }
+  .cps-multibooking-static {
+    @apply min-h-11 min-w-0 rounded-btn border border-transparent px-0 py-2 text-sm font-bold text-cps-black;
+  }
+  .cps-recurring-room-section {
+    @apply mb-5 rounded-card border border-cps-gray-border bg-cps-white p-4 shadow-sm md:p-5;
+  }
+  .cps-recurring-room-section legend {
+    @apply px-3 text-base font-bold text-cps-black;
+  }
+  .cps-recurring-list {
+    @apply flex flex-col gap-3;
+  }
+  .cps-recurring-row {
+    @apply grid min-w-0 gap-4 rounded-card border border-cps-gray-border bg-cps-white p-4 transition-colors hover:bg-cps-gray-light;
+    grid-template-columns: minmax(160px, 0.6fr) minmax(0, 1.4fr);
+  }
+  .cps-recurring-slot {
+    @apply min-w-0;
+  }
+  .cps-recurring-slot-label {
+    @apply flex min-w-0 cursor-pointer items-start gap-3 rounded-btn bg-red-50 p-3 text-sm;
+    float: none !important;
+    margin: 0 !important;
+    width: auto !important;
+  }
+  .cps-recurring-slot-label .cps-multibooking-check {
+    @apply mt-0.5 flex-shrink-0;
+  }
+  .cps-recurring-slot-text {
+    @apply min-w-0;
+  }
+  .cps-recurring-slot-text strong,
+  .cps-recurring-slot-text small {
+    @apply block;
+  }
+  .cps-recurring-slot-text strong {
+    @apply text-sm font-bold text-cps-black;
+  }
+  .cps-recurring-slot-text small {
+    @apply mt-1 text-xs leading-relaxed text-cps-gray-text;
+  }
+  .cps-recurring-fields {
+    @apply grid min-w-0 grid-cols-1 gap-3 md:grid-cols-2;
+  }
+  .cps-recurring-field {
+    @apply min-w-0 space-y-1;
+  }
+  .cps-recurring-field-notes {
+    @apply md:col-span-2;
+  }
+  .cps-recurring-label {
+    @apply text-xs font-bold uppercase tracking-wide text-cps-gray-text;
+  }
+  .cps-recurring-control {
+    @apply min-w-0;
+  }
+  .cps-recurring-control .cps-multibooking-input-group {
+    @apply w-full;
+  }
+  .cps-recurring-control .cps-multibooking-control {
+    @apply w-full;
+  }
+  .cps-multibooking-actions {
+    @apply sticky bottom-0 z-10 flex flex-col gap-3 border-t border-cps-gray-border bg-cps-white pt-4 sm:flex-row sm:items-center;
+  }
+  .cps-multibooking-actions .cps-btn,
+  .cps-multibooking-actions .cps-btn-secondary {
+    @apply min-h-11 w-full justify-center sm:w-auto;
+  }
   @media (max-width: 767px) {
     up-modal:has(.bookings-create) up-modal-viewport,
     up-modal:has(.bookings-edit) up-modal-viewport,
     up-modal:has(.bookings-view) up-modal-viewport,
-    up-modal:has(.bookings-card) up-modal-viewport {
+    up-modal:has(.bookings-card) up-modal-viewport,
+    up-modal:has(.bookings-cancel-multi) up-modal-viewport {
       padding: 0;
     }
     up-modal:has(.bookings-create) up-modal-box,
     up-modal:has(.bookings-edit) up-modal-box,
     up-modal:has(.bookings-view) up-modal-box,
-    up-modal:has(.bookings-card) up-modal-box {
+    up-modal:has(.bookings-card) up-modal-box,
+    up-modal:has(.bookings-cancel-multi) up-modal-box {
       width: 100vw;
       min-height: 100vh;
       max-height: 100vh;
+      overflow-x: hidden;
       border-radius: 0;
       padding: 1rem;
     }
     .bookings-modal-title {
       font-size: 1rem;
+    }
+    .bookings-view {
+      padding-bottom: 1rem;
+    }
+    .bookings-view .iconbar {
+      @apply mb-4 flex flex-col items-stretch gap-2;
+    }
+    .bookings-view .iconbar > a {
+      @apply flex min-h-11 w-full items-center justify-start whitespace-normal rounded-btn px-3 py-2 text-sm;
+    }
+    .cps-booking-view-heading {
+      @apply mb-2 text-base;
+    }
+    .cps-booking-detail-list {
+      @apply mb-4 p-3;
+    }
+    .cps-booking-detail-row {
+      @apply gap-1 py-3;
+    }
+    .cps-booking-detail-label {
+      @apply mb-0 text-sm leading-snug;
+    }
+    .cps-booking-detail-value {
+      @apply text-sm leading-relaxed;
+    }
+    .cps-cancel-multi-table,
+    .cps-cancel-multi-table thead,
+    .cps-cancel-multi-table tbody,
+    .cps-cancel-multi-table th,
+    .cps-cancel-multi-table td,
+    .cps-cancel-multi-table tr {
+      display: block;
+    }
+    .cps-cancel-multi-table {
+      table-layout: auto;
+    }
+    .cps-cancel-multi-table thead tr {
+      position: absolute;
+      top: -9999px;
+      left: -9999px;
+    }
+    .cps-cancel-multi-table tbody {
+      @apply flex flex-col gap-3;
+    }
+    .cps-cancel-multi-table tbody tr {
+      @apply rounded-card border border-cps-black bg-cps-white p-3 shadow-sm;
+    }
+    .cps-cancel-multi-table tbody td {
+      @apply grid min-h-10 items-start gap-2 rounded-btn border border-cps-black bg-cps-white px-3 py-2 text-sm;
+      grid-template-columns: minmax(96px, 0.42fr) minmax(0, 1fr);
+    }
+    .cps-cancel-multi-table tbody td::before {
+      content: attr(data-label);
+      @apply text-xs font-bold uppercase text-cps-gray-text;
+    }
+    .cps-cancel-multi-table tbody td:first-child {
+      @apply flex min-h-11 items-center gap-3 rounded-btn border border-cps-black bg-cps-white px-3 py-2;
+    }
+    .cps-cancel-multi-table tbody td:first-child::before {
+      content: attr(data-label);
+      @apply order-2 text-sm font-bold normal-case text-cps-black;
+    }
+    .cps-cancel-multi-table tbody td:first-child input[type="checkbox"] {
+      @apply order-1 h-5 w-5 flex-shrink-0 cursor-pointer;
+    }
+    .cps-cancel-multi-actions {
+      @apply sticky bottom-0 -mx-1 bg-cps-white px-1 pb-1 pt-3;
+    }
+    .cps-multi-select-controller {
+      @apply p-2;
+    }
+    .cps-multibooking-row {
+      @apply gap-3 p-3;
+      grid-template-columns: minmax(0, 1fr);
+    }
+    .cps-multibooking-slot {
+      @apply w-full max-w-full;
+    }
+    .cps-multibooking-slot-inner {
+      @apply w-full items-start;
+    }
+    .cps-multibooking-check-wrap {
+      @apply h-8;
+    }
+    .cps-multibooking-fields {
+      @apply border-l-0 border-t border-cps-gray-border pl-0 pt-3;
+    }
+    .cps-multibooking-field {
+      grid-template-columns: minmax(0, 1fr);
+    }
+    .cps-multibooking-label {
+      @apply pt-0;
+    }
+    .cps-multibooking-input-group {
+      @apply gap-2;
+    }
+    .cps-multibooking-actions {
+      @apply static -mx-1 px-1 pb-1;
+    }
+    .cps-recurring-room-section {
+      @apply p-3;
+    }
+    .cps-recurring-row {
+      @apply gap-3 p-3;
+      grid-template-columns: minmax(0, 1fr);
+    }
+    .cps-recurring-slot-label {
+      @apply p-2.5;
+    }
+    .cps-recurring-fields {
+      @apply gap-3;
+      grid-template-columns: minmax(0, 1fr);
+    }
+    .cps-recurring-field-notes {
+      grid-column: auto;
     }
   }
 

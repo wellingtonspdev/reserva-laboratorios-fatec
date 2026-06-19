@@ -138,6 +138,7 @@ up.compiler('.bookings-grid-cards', function(gridEl) {
 	function setMultiSelect(enabled) {
 		var state = enabled ? 'true' : 'false';
 		gridEl.setAttribute('data-multi-select', state);
+		wrapperEl.setAttribute('data-multi-select', state);
 
 		var items = wrapperEl.querySelectorAll('.multi-select-content');
 		for (var i = 0; i < items.length; i++) {

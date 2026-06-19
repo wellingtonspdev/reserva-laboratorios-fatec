@@ -3,7 +3,7 @@
 // Generate table of bookings
 //
 $this->table->set_template([
-	'table_open' => '<table class="zebra-table form-table multibooking-table" style="line-height:1.3;margin-bottom:16px" width="100%" cellpadding="8" cellspacing="0" border="0">',
+	'table_open' => '<table class="zebra-table form-table multibooking-table cps-cancel-multi-table" style="line-height:1.3;margin-bottom:16px" width="100%" cellpadding="8" cellspacing="0" border="0">',
 ]);
 
 
@@ -84,13 +84,13 @@ foreach ($bookings as $booking) {
 	// Add row
 	//
 	$row = [];
-	$row[] = $check_col;
-	$row[] = $date_col;
-	$row[] = $period_col;
-	$row[] = $room_col;
-	$row[] = $department_col;
-	$row[] = $user_col;
-	$row[] = $notes_col;
+	$row[] = ['data' => $check_col, 'data-label' => lang('booking.cancel_multi.action')];
+	$row[] = ['data' => $date_col, 'data-label' => lang('app.date')];
+	$row[] = ['data' => $period_col, 'data-label' => lang('period.period')];
+	$row[] = ['data' => $room_col, 'data-label' => lang('room.room')];
+	$row[] = ['data' => $department_col, 'data-label' => lang('department.department')];
+	$row[] = ['data' => $user_col, 'data-label' => lang('user.user')];
+	$row[] = ['data' => $notes_col, 'data-label' => lang('booking.notes')];
 
 	$this->table->add_row($row);
 
@@ -122,12 +122,11 @@ echo "</fieldset>";
 
 // Footer (submit or canceL)
 //
-$cancel = anchor($return_uri ?? '', lang('app.action.cancel'), ['up-dismiss' => '']);
+$cancel = anchor($return_uri ?? '', lang('app.action.cancel'), ['up-dismiss' => '', 'class' => 'cps-btn cps-btn-secondary']);
 $submit_single = form_button([
 	'type' => 'submit',
 	'content' => lang('booking.cancel_multi.action'),
-	'style' => 'border: 1px solid red',
+	'class' => 'cps-btn',
 ]);
-echo "<div style='border-top:0px;'>{$submit_single} &nbsp; {$cancel}</div>";
+echo "<div class='cps-cancel-multi-actions'>{$submit_single} {$cancel}</div>";
 echo form_close();
-
