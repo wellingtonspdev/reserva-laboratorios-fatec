@@ -1,33 +1,8 @@
 <?php
 
-// Date format of bookings
-
 use app\components\Calendar;
 
-$fieldset_fmt = <<<EOF
-<fieldset style='padding:0;'>
-	<legend style='margin:8px;color:inherit'>%s</legend>
-	%s
-</fieldset>
-EOF;
-
-
-// Generate table of bookings
-//
-$this->table->set_template([
-	'table_open' => '<table
-		class="zebra-table form-table multibooking-table"
-		style="line-height:1.3;margin:0;border-top:0;border-bottom:0;"
-		width="100%"
-		cellpadding="8"
-		cellspacing="0"
-		border="0"
-	>',
-]);
-
-// Get columns for table
-//
-
+$dates = [];
 $by_room = [];
 
 foreach ($multibooking->slots as $key => $slot) {
@@ -40,39 +15,35 @@ $show_date_col = (count(array_unique($dates)) == 1)
 	? false
 	: true;
 
-// Configure table headings
-//
-$cols = [];
-$cols[] = ['data' => '', 'width' => 10];
-if ($show_date_col) {
-	$cols[] = ['data' => lang('app.date'), 'width' => ''];
-} else {
-	$cols[] = ['data' => lang('period.period'), 'width' => ''];
-}
-$cols[] = ['data' => lang('department.department'), 'width' => '17%'];
-$cols[] = ['data' => lang('user.user'), 'width' => '17%'];
-$cols[] = ['data' => lang('booking.notes'), 'width' => '17%'];
-$cols[] = ['data' => lang('booking.start'), 'width' => '17%'];
-$cols[] = ['data' => lang('booking.end'), 'width' => '17%'];
+$render_field = static function ($label, $control, $class = '') {
+	$class_attr = trim("cps-recurring-field {$class}");
+	return "<div class='{$class_attr}'><div class='cps-recurring-label'>{$label}</div><div class='cps-recurring-control'>{$control}</div></div>";
+};
 
-
-// Generate rows
-//
+$render_input_group = static function ($input, $copy_group = '', $show_copy = false) {
+	$copy = '';
+	if ($show_copy) {
+		$copy = "<button type='button' class='cps-multibooking-copy' up-copy-to='{$copy_group}' title='Copiar para todos'>&darr;</button>";
+	}
+	return "<div class='cps-multibooking-input-group'>{$input}{$copy}</div>";
+};
 
 foreach ($by_room as $room_id => $data) {
 
 	$fields = [];
-
 	$room_name_esc = html_escape($data['room']->name);
 
-	if ( ! has_permission(Permission::BK_RECUR_CREATE, $room_id)) {
-		$msg = msgbox('notice large', lang('booking.error.no_permission_room'));
-		$msg = "<div style='padding:8px'>{$msg}</div>";
-		echo sprintf($fieldset_fmt, $room_name_esc, $msg);
+	echo "<fieldset class='cps-recurring-room-section'>";
+	echo "<legend>{$room_name_esc}</legend>";
+
+	if (!has_permission(Permission::BK_RECUR_CREATE, $room_id)) {
+		echo msgbox('notice large', lang('booking.error.no_permission_room'));
+		echo "</fieldset>";
 		continue;
 	}
 
 	$slot_count = count($data['slots']);
+	echo "<div class='cps-recurring-list'>";
 
 	foreach ($data['slots'] as $key => $slot) {
 
@@ -82,52 +53,50 @@ foreach ($by_room as $room_id => $data) {
 		$lang_key = sprintf('cal_%s', strtolower((string) $day_name));
 		$day_name_lang = lang($lang_key);
 
-		// List of availbale dates to choose from for recurring dates
-		//
 		$recurring_date_options = [];
 		if (is_array($slot->recurring_dates)) {
 			foreach ($slot->recurring_dates as $date) {
 				$title = date_output_long($date->date);
-				if ($date->date->format('Y-m-d') == $slot->date) $title = '* ' . $title;
-				$recurring_date_options[ $date->date->format('Y-m-d') ] = $title;
+				if ($date->date->format('Y-m-d') == $slot->date) {
+					$title = '* ' . $title;
+				}
+				$recurring_date_options[$date->date->format('Y-m-d')] = $title;
 			}
 		}
 
-
-		// 'Create' checkbox col
-		//
 		$create_field = sprintf('slots[%d][create]', $slot->mbs_id);
 		$create_hidden = form_hidden($create_field, 0);
-		$check_props = [
+		$create_check = form_checkbox([
 			'id' => $create_field,
 			'name' => $create_field,
 			'value' => 1,
 			'checked' => (set_value($create_field, 1) == 1),
-		];
-		$create_check = form_checkbox($check_props);
-		$check_col = $create_hidden . $create_check;
+			'class' => 'cps-multibooking-check',
+		]);
 
-		// Date column
-		//
 		if ($show_date_col) {
-			$date = "<div>" . date_output_long($slot->datetime) . "</div>";
-			$period_text = sprintf('<small class="hint">%s (%s - %s)</small>',
+			$slot_title = date_output_long($slot->datetime);
+			$slot_meta = sprintf('%s (%s - %s)',
 				html_escape($slot->period->name),
 				date_output_time($slot->period->time_start),
 				date_output_time($slot->period->time_end)
 			);
-			$date_period_col = form_label($date . $period_text, $create_field, ['class' => 'ni']);
 		} else {
-			$period_text = sprintf('<div>%s</div><small class="hint">(%s - %s)</small>',
-				html_escape($slot->period->name),
+			$slot_title = html_escape($slot->period->name);
+			$slot_meta = sprintf('%s - %s',
 				date_output_time($slot->period->time_start),
 				date_output_time($slot->period->time_end)
 			);
-			$date_period_col = form_label($period_text, $create_field, ['class' => 'ni']);
 		}
 
-		// Department column
-		//
+		$slot_header = form_label(
+			$create_hidden
+			. $create_check
+			. "<span class='cps-recurring-slot-text'><strong>{$slot_title}</strong><small>{$slot_meta}</small></span>",
+			$create_field,
+			['class' => 'cps-recurring-slot-label']
+		);
+
 		if ($capabilities['recur.set_department']) {
 			$copy_group = sprintf('r%d-department', $room_id);
 			$department_field = sprintf('slots[%d][department_id]', $slot->mbs_id);
@@ -137,26 +106,22 @@ foreach ($by_room as $room_id => $data) {
 				'id' => $department_field,
 				'options' => html_escape($department_options),
 				'selected' => $value,
+				'class' => 'cps-multibooking-control',
 				'up-copy-group' => $copy_group,
 			]);
-			$input_block = "<div class='block b-90'>{$input}</div>";
-			$append_block = '';
-			if ( ! isset($fields['department']) && $slot_count > 1) {
-				$fields['department'] = true;
-				$append_block = "<div class='block b-10'><button type='button' class='btn-block' up-copy-to='{$copy_group}'>&darr;</button></div>";
-			}
-			$department_col = "<div class='block-group'>{$input_block}{$append_block}</div>";
+			$department_col = $render_field(
+				lang('department.department'),
+				$render_input_group($input, $copy_group, !isset($fields['department']) && $slot_count > 1)
+			);
+			$fields['department'] = true;
 		} else {
 			$department_label = sprintf('(%s)', lang('app.none'));
-			if (isset($department) && ! empty($department)) {
+			if (isset($department) && !empty($department)) {
 				$department_label = html_escape($department->name);
 			}
-			$department_col = "<div class='block-group'>{$department_label}</div>";
+			$department_col = $render_field(lang('department.department'), "<div class='cps-multibooking-static'>{$department_label}</div>");
 		}
 
-
-		// User column
-		//
 		if ($capabilities['recur.set_user']) {
 			$copy_group = sprintf('r%d-user', $room_id);
 			$user_field = sprintf('slots[%d][user_id]', $slot->mbs_id);
@@ -166,29 +131,23 @@ foreach ($by_room as $room_id => $data) {
 				'id' => $user_field,
 				'options' => $user_options,
 				'selected' => $value,
+				'class' => 'cps-multibooking-control',
 				'up-copy-group' => $copy_group,
 			]);
-			$input_block = "<div class='block b-90'>{$input}</div>";
-			$append_block = '';
-			if ( ! isset($fields['user']) && $slot_count > 1) {
-				$fields['user'] = true;
-				$append_block = "<div class='block b-10'><button type='button' class='btn-block' up-copy-to='{$copy_group}'>&darr;</button></div>";
-			}
-			$user_col = "<div class='block-group'>{$input_block}{$append_block}</div>";
+			$user_col = $render_field(
+				lang('user.user'),
+				$render_input_group($input, $copy_group, !isset($fields['user']) && $slot_count > 1)
+			);
+			$fields['user'] = true;
 		} else {
 			$user_label = sprintf('(%s)', lang('app.none'));
-			if (isset($user) && ! empty($user)) {
-				$user_label = !empty($user->displayname)
-					? $user->displayname
-					: $user->username
-					;
+			if (isset($user) && !empty($user)) {
+				$user_label = !empty($user->displayname) ? $user->displayname : $user->username;
 				$user_label = html_escape($user_label);
 			}
-			$user_col = "<div class='block-group'>{$user_label}</div>";
+			$user_col = $render_field(lang('user.user'), "<div class='cps-multibooking-static'>{$user_label}</div>");
 		}
 
-		// Notes
-		//
 		$copy_group = sprintf('r%d-notes', $room_id);
 		$notes_field = sprintf('slots[%d][notes]', $slot->mbs_id);
 		$value = set_value($notes_field, '', FALSE);
@@ -197,19 +156,17 @@ foreach ($by_room as $room_id => $data) {
 			'id' => $notes_field,
 			'size' => 30,
 			'value' => $value,
+			'class' => 'cps-multibooking-control',
+			'placeholder' => lang('booking.notes'),
 			'up-copy-group' => $copy_group,
 		]);
-		$input_block = "<div class='block b-90'>{$input}</div>";
-		$append_block = '';
-		if ( ! isset($fields['notes']) && $slot_count > 1) {
-			$fields['notes'] = true;
-			$append_block = "<div class='block b-10'><button type='button' class='btn-block' up-copy-to='{$copy_group}'>&darr;</button></div>";
-		}
-		$notes_col = "<div class='block-group'>{$input_block}{$append_block}</div>";
+		$notes_col = $render_field(
+			lang('booking.notes'),
+			$render_input_group($input, $copy_group, !isset($fields['notes']) && $slot_count > 1),
+			'cps-recurring-field-notes'
+		);
+		$fields['notes'] = true;
 
-
-		// Recurring start from
-		//
 		$copy_group = sprintf('r%d-start-%s', $room_id, $day_name);
 		$start_field = sprintf('slots[%d][recurring_start]', $slot->mbs_id);
 		$options = [
@@ -222,18 +179,16 @@ foreach ($by_room as $room_id => $data) {
 			'id' => $start_field,
 			'options' => $options,
 			'selected' => $value,
+			'class' => 'cps-multibooking-control',
 			'up-copy-group' => $copy_group,
 		]);
-		$input_block = "<div class='block b-90'>{$input}</div>";
-		$append_block = '';
-		if (!isset($fields[$copy_group]) && $slot_count > 1) {
-			$fields[$copy_group] = true;
-			$append_block = "<div class='block b-10'><button type='button' class='btn-block' up-copy-to='{$copy_group}'>&darr;</button></div>";
-		}
-		$start_col = "<div class='block-group'>{$input_block}{$append_block}</div>";
+		$start_col = $render_field(
+			lang('booking.start'),
+			$render_input_group($input, $copy_group, !isset($fields[$copy_group]) && $slot_count > 1),
+			'cps-recurring-field-start'
+		);
+		$fields[$copy_group] = true;
 
-		// Recurring end date
-		//
 		$copy_group = sprintf('r%d-end-%s', $room_id, $day_name);
 		$end_field = sprintf('slots[%d][recurring_end]', $slot->mbs_id);
 		$options = [
@@ -246,49 +201,36 @@ foreach ($by_room as $room_id => $data) {
 			'id' => $end_field,
 			'options' => $options,
 			'selected' => $value,
+			'class' => 'cps-multibooking-control',
 			'up-copy-group' => $copy_group,
 		]);
-		$input_block = "<div class='block b-90'>{$input}</div>";
-		$append_block = '';
-		if (!isset($fields[$copy_group]) && $slot_count > 1) {
-			$fields[$copy_group] = true;
-			$append_block = "<div class='block b-10'><button type='button' class='btn-block' up-copy-to='{$copy_group}'>&darr;</button></div>";
-		}
-		$end_col = "<div class='block-group'>{$input_block}{$append_block}</div>";
+		$end_col = $render_field(
+			lang('booking.end'),
+			$render_input_group($input, $copy_group, !isset($fields[$copy_group]) && $slot_count > 1),
+			'cps-recurring-field-end'
+		);
+		$fields[$copy_group] = true;
 
-
-		// Add row
-		//
-		$row = [];
-		$row[] = $check_col;
-		$row[] = $date_period_col;
-		$row[] = $department_col;
-		$row[] = $user_col;
-		$row[] = $notes_col;
-		$row[] = $start_col;
-		$row[] = $end_col;
-		$this->table->add_row($row);
+		echo "<div class='cps-recurring-row'>";
+		echo "<div class='cps-recurring-slot'>{$slot_header}</div>";
+		echo "<div class='cps-recurring-fields'>{$department_col}{$user_col}{$start_col}{$end_col}{$notes_col}</div>";
+		echo "</div>";
 	}
 
-	$this->table->set_heading($cols);
-
-	echo sprintf($fieldset_fmt, $room_name_esc, $this->table->generate());
-
+	echo "</div>";
+	echo "</fieldset>";
 }
 
 if ($can_book_recur) {
-
-	// Actions
-	//
 	$submit = form_button([
 		'type' => 'submit',
 		'name' => 'action',
 		'value' => 'create',
+		'class' => 'cps-btn cps-btn-primary',
 		'content' => lang('app.action.continue') . ' &rarr;',
 	]);
 
-	$cancel = anchor($return_uri, lang('app.action.cancel'), ['up-dismiss' => '']);
+	$cancel = anchor($return_uri, lang('app.action.cancel'), ['class' => 'cps-btn cps-btn-secondary', 'up-dismiss' => '']);
 
-	echo "<div class='booking-type-content' style='border-top:0px;'>{$submit} &nbsp; {$cancel}</div>";
-
+	echo "<div class='cps-multibooking-actions'>{$submit}{$cancel}</div>";
 }

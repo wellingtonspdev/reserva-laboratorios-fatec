@@ -28,7 +28,7 @@ if ( ! is_null($constraints['max_active_bookings'])) {
 	];
 }
 
-echo "<div class='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3 mb-8'>";
+echo "<div class='cps-dashboard-stats'>";
 
 foreach ($blocks as $block) {
 
@@ -38,7 +38,7 @@ foreach ($blocks as $block) {
 	$title = html_escape($block['title']);
 	$title_html = "<dd class='text-xs text-cps-gray-text uppercase tracking-wide m-0'>{$title}</dd>";
 
-	$block_content = "<div class='bg-cps-white border border-cps-gray-border rounded-card p-4 shadow-sm'><dl class='m-0 p-0'>{$title_html}{$figure_html}</dl></div>";
+	$block_content = "<div class='cps-dashboard-stat-card'><dl class='m-0 p-0'>{$title_html}{$figure_html}</dl></div>";
 
 	echo $block_content;
 

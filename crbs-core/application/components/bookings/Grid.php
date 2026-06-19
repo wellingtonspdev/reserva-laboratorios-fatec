@@ -147,31 +147,27 @@ class Grid
 	 */
 	public function render_footer()
 	{
-		if ($this->context->exception) {
-			return '';
-		}
-
-		return $this->render_multiselect_controls('footer');
+		return '';
 	}
 
 
 	private function render_multiselect_controls($position = '')
 	{
-		$mb = ($position === 'header') ? 'mb-2' : 'mt-2 mb-8';
+		$position_class = ($position === 'header') ? 'mb-3' : 'mt-3 mb-8';
 
-		$toggle_true = '<span class="multi-select-content" style="display:none" data-multi="true">&#9745;</span>';
-		$toggle_false = '<span class="multi-select-content" data-multi="false">&#9745;</span>';
+		$toggle_true = '<span class="multi-select-content cps-multi-select-state" style="display:none" data-multi="true">&#9745; ' . lang('booking.toggle_multi_select') . '</span>';
+		$toggle_false = '<span class="multi-select-content cps-multi-select-state" data-multi="false">&#9744; ' . lang('booking.toggle_multi_select') . '</span>';
 
 		$toggle_btn = form_button([
 			'type' => 'button',
 			'data-script' => 'on click trigger toggle_ms on .bookings-grid-cards',
-			'content' => $toggle_false . $toggle_true . ' ' . lang('booking.toggle_multi_select'),
-			'class' => 'cps-btn-secondary text-xs px-2 py-1',
+			'content' => $toggle_false . $toggle_true,
+			'class' => 'cps-multi-select-toggle',
 		]);
 
 		$create_btn = form_button([
 			'type' => 'submit',
-			'class' => 'multi-select-content cps-btn text-xs px-2 py-1 bg-green-50 border border-green-500 text-green-700',
+			'class' => 'multi-select-content cps-multi-select-action cps-multi-select-action-create',
 			'style' => 'display:none',
 			'data-multi' => 'true',
 			'form' => 'form_create_multi',
@@ -180,14 +176,14 @@ class Grid
 
 		$cancel_btn = form_button([
 			'type' => 'submit',
-			'class' => 'multi-select-content cps-btn text-xs px-2 py-1 bg-red-50 border border-red-500 text-red-700',
+			'class' => 'multi-select-content cps-multi-select-action cps-multi-select-action-cancel',
 			'style' => 'display:none',
 			'data-multi' => 'true',
 			'form' => 'form_cancel_multi',
 			'content' => '&#10008; ' . lang('booking.action.cancel_bookings') . '...',
 		]);
 
-		return "<div class='flex justify-end items-center gap-2 p-2 {$mb} multi-select-controller'>{$create_btn}{$cancel_btn}{$toggle_btn}</div>";
+		return "<div class='cps-multi-select-controller {$position_class} multi-select-controller'>{$create_btn}{$cancel_btn}{$toggle_btn}</div>";
 	}
 
 

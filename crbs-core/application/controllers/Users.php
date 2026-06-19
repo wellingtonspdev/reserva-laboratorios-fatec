@@ -140,8 +140,11 @@ class Users extends MY_Controller
 		$title = "<div class='cps-admin-toolbar'><div>{$back}</div><div></div></div><h2>{$this->data['title']}</h2>";
 		$form = $this->load->view('users/users_add', $this->data, TRUE);
 		$side = $this->load->view('users/users_add_side', $this->data, TRUE);
+		$content = trim($side) === ''
+			? "<div>{$form}</div>"
+			: "<div class='cps-admin-layout'><div>{$form}</div><aside class='cps-admin-side-panel'>{$side}</aside></div>";
 
-		$this->data['body'] = "<div class='cps-admin-page'>{$title}<div class='cps-admin-layout'><div>{$form}</div><aside class='cps-admin-side-panel'>{$side}</aside></div></div>";
+		$this->data['body'] = "<div class='cps-admin-page'>{$title}{$content}</div>";
 
 		return $this->render();
 	}
@@ -184,8 +187,11 @@ class Users extends MY_Controller
 		$title = "<div class='cps-admin-toolbar'><div>{$back}</div><div></div></div><h2>{$this->data['title']}</h2>";
 		$form = $this->load->view('users/users_add', $this->data, TRUE);
 		$side = $this->load->view('users/users_add_side', $this->data, TRUE);
+		$content = trim($side) === ''
+			? "<div>{$form}</div>"
+			: "<div class='cps-admin-layout'><div>{$form}</div><aside class='cps-admin-side-panel'>{$side}</aside></div>";
 
-		$this->data['body'] = "<div class='cps-admin-page'>{$title}<div class='cps-admin-layout'><div>{$form}</div><aside class='cps-admin-side-panel'>{$side}</aside></div></div>";
+		$this->data['body'] = "<div class='cps-admin-page'>{$title}{$content}</div>";
 
 		return $this->render();
 	}

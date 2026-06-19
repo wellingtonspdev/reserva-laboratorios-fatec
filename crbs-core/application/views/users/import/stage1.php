@@ -81,35 +81,43 @@ echo form_hidden('action', 'import');
 	</p>
 
 
-	<p class="input-group">
-		<label for="enabled"><?= lang('user.field.enabled') ?></label>
+	<p class="input-group cps-checkbox-field">
 		<?php
 		echo form_hidden('enabled', '0');
 		$value = set_value('enabled', '1');
-		echo form_checkbox(array(
-			'name' => 'enabled',
-			'id' => 'enabled',
-			'value' => '1',
-			'tabindex' => tab_index(),
-			'checked' => $value == 1,
-		));
 		?>
+		<label for="enabled">
+			<span><?= lang('user.field.enabled') ?></span>
+			<?php
+			echo form_checkbox(array(
+				'name' => 'enabled',
+				'id' => 'enabled',
+				'value' => '1',
+				'tabindex' => tab_index(),
+				'checked' => $value == 1,
+			));
+			?>
+		</label>
 	</p>
 
 
-	<p class="input-group">
-		<label for="force_password_reset"><?= lang('user.field.force_password_reset') ?></label>
+	<p class="input-group cps-checkbox-field">
 		<?php
 		echo form_hidden('force_password_reset', '0');
 		$value = set_value('force_password_reset', '1');
-		echo form_checkbox(array(
-			'name' => 'force_password_reset',
-			'id' => 'force_password_reset',
-			'value' => '1',
-			'tabindex' => tab_index(),
-			'checked' => $value == 1,
-		));
 		?>
+		<label for="force_password_reset">
+			<span><?= lang('user.field.force_password_reset') ?></span>
+			<?php
+			echo form_checkbox(array(
+				'name' => 'force_password_reset',
+				'id' => 'force_password_reset',
+				'value' => '1',
+				'tabindex' => tab_index(),
+				'checked' => $value == 1,
+			));
+			?>
+		</label>
 	</p>
 
 

@@ -1,7 +1,7 @@
 <?php
 
-$lang['period.periods'] = 'Periodos';
-$lang['period.period'] = 'Period';
+$lang['period.periods'] = 'Períodos';
+$lang['period.period'] = 'Período';
 $lang['period.hint'] = 'Todos os horarios devem ser inseridos no formato de 24 horas, entre 00:00 e 23:59. Os periodos nao devem se sobrepor.';
 $lang['period.field.bookable'] = 'Reservavel';
 $lang['period.field.name'] = 'Nome';
